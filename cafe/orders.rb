@@ -13,6 +13,15 @@ class CafeConsole < ConsoleUI
         @errors = nil
         uString = uString.split(" ")
 
+        # lookup = {
+        #
+        #     "sett" => @cafe.set_tables(uString[1].to_i),
+        #     "seat" => @cafe.set_tables(uString[1].to_i)
+        #
+        # }
+        #
+        # @errors = lookup[uString[0]]
+
         case uString[0]
         when "settables", "sett"
             @errors = @cafe.set_tables(uString[1].to_i)
@@ -267,9 +276,26 @@ class Order
     # end
 
 end
-class Items
+
+class Menu
 
     def initialize
+        @items = []
+    end
+
+    def add_item( item )
+        @items << item
+    end
+
+end
+
+class Items
+
+    # attr_accessor( :name, :price )
+
+    def initialize()
+        # @name = name
+        # @price = price
         @items = {
             pizza: 4.99,
             steak_pie: 6.99,
@@ -278,7 +304,13 @@ class Items
             lemonade: 1.99,
             water: 0.00
         }
+        # menu[0] = Item.new(:pizza, 4.99)
     end
+
+    # def name
+    #     return @name
+    # end
+
     def getItems()
         @items
     end
