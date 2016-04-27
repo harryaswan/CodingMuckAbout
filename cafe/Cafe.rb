@@ -1,0 +1,114 @@
+class Cafe
+    def initialize
+        @selected_table = nil
+        @tables = []
+        @items = Items.new
+        @cash = 0.00
+    end
+
+    def set_tables(num)
+        num.times { @tables.push(Table.new(@tables.length))}
+        return "#{num} tables have been set up."
+    end
+
+    def add_table()
+        @tables.push(Table.new(@tables.length))
+        return "A new table has been added, it is Table #{@tables.length - 1}"
+    end
+
+    def seat_table(num, ppl)
+        if num < @tables.length
+            @tables[num].new(ppl)
+            return "Table #{num} has been seated with #{ppl} people"
+        else
+            return "Sorry but table #{num} has not been setup...\nTry adding the table to the cafe first"
+        end
+    end
+
+    def select_table(num)
+        if (num < @tables.length)
+            @selected_table = num
+        else
+            return "Please ensure you enter a table number"
+        end
+    end
+
+    def unselect_table()
+        @selected_table = nil
+    end
+
+    def view_selected_table()
+        return @selected_table ? "Table #{@selected_table} is currently selected" : "No table is currently selected"
+    end
+
+    def order(item)
+        if @selected_table
+            if (items_avaliable().key?(item))
+                @tables[@selected_table].order(item)
+            else
+                return "The item you have tried to order has not been created... try additem first"
+            end
+        else
+            return "You must select a table first..."
+        end
+    end
+
+    def unorder(item)
+        if @selected_table
+            @tables[@selected_table].unorder(item)
+        else
+            return "You must select a table first..."
+        end
+    end
+
+    def view_order()
+
+        order_string = "\n"
+
+        @tables[@selected_table].view_ordered_items().each { |x| order_string << "* #{x.to_s} \n"}
+
+        return order_string
+
+    end
+
+    def pay(ppl)
+        if ppl == "" || ppl.to_i == 0
+            ppl = 1
+        end
+
+        return @tables[@selected_table].pay(ppl.to_i, items_avaliable())
+    end
+
+    def clear_table(paid=true)
+        if @selected_table
+            cash_in(pay(1))
+            return cash()
+        else
+            return "Please select a table to clear"
+        end
+    end
+
+    def cash()
+        return @cash
+    end
+    def cash_in(amt)
+        @cash += amt
+        return @cash
+    end
+    def cash_out(amt)
+        @cash -= amt
+        return @cash
+    end
+
+    def items_avaliable()
+        @items.getItems()
+    end
+
+    def add_item(item, price)
+        @items.add(item, price)
+    end
+
+    def remove_item(item)
+        @items.delete(item)
+    end
+end
