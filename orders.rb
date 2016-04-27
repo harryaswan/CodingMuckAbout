@@ -40,6 +40,10 @@ class CafeConsole < ConsoleUI
             @errors = @cafe.remove_item(uString[1].to_sym)
         when "pay"
             @errors = @cafe.pay(uString[1])
+        when "cleartable", "clear"
+            @errors = @cafe.clear_table(uString[1])
+        when "cash"
+            @errors = @cafe.cash()
         when "help"
             self.printHelp
         when "exit", "close", "closecafe"
@@ -78,6 +82,8 @@ class CafeConsole < ConsoleUI
         puts "additem | addi [x] [p]    : adds a new item [x] and it's price [p] to the list of items avaliable for order"
         puts "removeitem | remi [x]     : removes item [x] from the list of items avaliable to order"
         puts "pay [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party"
+        puts "cleartable | clear        : clear the table and add the money from the bill to the Cafe cash"
+        puts "cash                      : returns the total cash brought in through all the tables that have been cleared"
         puts "help                      : prints out this menu"
         puts "exit | close : will close the programme and the cafe"
     end
@@ -90,6 +96,7 @@ class Cafe
         @selected_table = nil
         @tables = []
         @items = Items.new
+        @cash = 0.00
     end
 
     def set_tables(num)
@@ -129,7 +136,7 @@ class Cafe
 
     def order(item)
         if @selected_table
-            if (@items.key?(item))
+            if (items_avaliable().key?(item))
                 @tables[@selected_table].order(item)
             else
                 return "The item you have tried to order has not been created... try additem first"
@@ -162,7 +169,19 @@ class Cafe
             ppl = 1
         end
 
-        return "The bill is £#{@tables[@selected_table].pay(ppl.to_i, items_avaliable())}"
+        return @tables[@selected_table].pay(ppl.to_i, items_avaliable())
+    end
+
+    def clear_table(paid=true)
+        if paid
+            @cash += pay()
+        end
+    end
+
+    def cash()
+
+        return @cash
+
     end
 
     def items_avaliable()
@@ -216,11 +235,6 @@ class Table
         }
         return total/ppl.round(2)
     end
-
-    def clear_table()
-
-    end
-
 
 end
 class Order
