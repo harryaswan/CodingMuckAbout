@@ -1,4 +1,5 @@
 class ConsoleUI
+
     def initialize()
         @running = true
     end
@@ -10,8 +11,6 @@ class ConsoleUI
         when "exit"
             puts "Adios!"
             @running = false
-        when "test"
-            puts "Stuff"
         else
             puts "'#{uString}' is not a recognised command..."
             self.printHelp
