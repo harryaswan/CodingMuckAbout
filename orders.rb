@@ -38,6 +38,8 @@ class CafeConsole < ConsoleUI
             @errors = @cafe.add_item(uString[1].to_sym, uString[2].to_f)
         when "removeitem", "remi"
             @errors = @cafe.remove_item(uString[1].to_sym)
+        when "pay"
+            @errors = @cafe.pay(uString[1])
         when "help"
             self.printHelp
         when "exit", "close", "closecafe"
@@ -48,11 +50,36 @@ class CafeConsole < ConsoleUI
             self.printHelp
         end
 
-
         if @errors
-            puts "** #{@errors} **"
+            if @errors.is_a? Hash
+                puts "******"
+                @errors.each { |f, c| puts "#{f} £#{c}" }
+                puts "******"
+            else
+                puts "** #{@errors} **"
+            end
         end
 
+    end
+
+    def printHelp
+        puts "\nCafe CodeClan"
+        puts "---------------"
+        puts "settables | sett [x]      : sets up [x] number of tables in the cafe"
+        puts "addtable | add            : adds a new table and will return the table number"
+        puts "seattable | seat [x] [y]  : seats [y] number of people at table [x]"
+        puts "selecttable | selt [x]    : selects the table [x] so that it can be modified"
+        puts "viewselectedtable | vst   : returns the table number that is currently selected"
+        puts "unselecttable | ust       : unselects the current table, you will have to select a new table"
+        puts "order [x]                 : adds item [x] to the selected table's order"
+        puts "unorder [x]               : revoves item [x] from the selected table's order"
+        puts "vieworder | vo            : returns the selected tables order"
+        puts "items                     : returns a list of the items avaliable for order"
+        puts "additem | addi [x] [p]    : adds a new item [x] and it's price [p] to the list of items avaliable for order"
+        puts "removeitem | remi [x]     : removes item [x] from the list of items avaliable to order"
+        puts "pay [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party"
+        puts "help                      : prints out this menu"
+        puts "exit | close : will close the programme and the cafe"
     end
 
 
@@ -85,7 +112,7 @@ class Cafe
     end
 
     def select_table(num)
-        if (num)
+        if (num < @tables.length)
             @selected_table = num
         else
             return "Please ensure you enter a table number"
@@ -102,7 +129,11 @@ class Cafe
 
     def order(item)
         if @selected_table
-            @tables[@selected_table].order(item)
+            if (@items.key?(item))
+                @tables[@selected_table].order(item)
+            else
+                return "The item you have tried to order has not been created... try additem first"
+            end
         else
             return "You must select a table first..."
         end
@@ -122,8 +153,16 @@ class Cafe
 
         @tables[@selected_table].view_ordered_items().each { |x| order_string << "* #{x.to_s} \n"}
 
-        return order_string << "\n"
+        return order_string
 
+    end
+
+    def pay(ppl)
+        if ppl == "" || ppl.to_i == 0
+            ppl = 1
+        end
+
+        return "The bill is £#{@tables[@selected_table].pay(ppl.to_i, items_avaliable())}"
     end
 
     def items_avaliable()
@@ -170,8 +209,12 @@ class Table
         return @order.viewAllItems()
     end
 
-    def pay(ppl)
-
+    def pay(ppl, items)
+        total = 0
+        @order.viewAllItems.each { |a|
+            total += items[a]
+        }
+        return total/ppl.round(2)
     end
 
     def clear_table()
@@ -191,7 +234,7 @@ class Order
         @items.push(new_item)
     end
     def removeItem(old_item)
-        @items.delete(old_item)
+        @items.delete_at(@items.index(old_item))
     end
     def viewAllItems()
         return @items
@@ -224,6 +267,8 @@ class Items
     end
 
 end
+
+puts "\nWelcome to Cafe CodeClan..."
 
 con = CafeConsole.new()
 con.start

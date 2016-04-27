@@ -3,10 +3,18 @@
 # consoleUI = ConsoleUI.new
 # consoleUI.start
 
+@items = {
+    pizza: 4.99,
+    steak_pie: 6.99,
+    pasta: 7.99,
+    cola: 1.99,
+    pizza: 4.99,
+    lemonade: 1.99,
+    water: 0.00
+}
 
-test = []
+puts @items
 
-5.times { test.push(test.length) }
-puts "Test: #{test.length}"
+@items.delete(:pizza)
 
-test.each { |x| puts "A: #{x}"}
+puts @items
