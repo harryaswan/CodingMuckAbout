@@ -3,7 +3,7 @@ require_relative("console.rb")
 class CafeConsole < ConsoleUI
 
     def initialize
-        @running = true
+        super()
         @cafe = Cafe.new
         @errors = nil
     end
@@ -173,15 +173,24 @@ class Cafe
     end
 
     def clear_table(paid=true)
-        if paid
-            @cash += pay()
+        if @selected_table
+            cash_in(pay(1))
+            return cash()
+        else
+            return "Please select a table to clear"
         end
     end
 
     def cash()
-
         return @cash
-
+    end
+    def cash_in(amt)
+        @cash += amt
+        return @cash
+    end
+    def cash_out(amt)
+        @cash -= amt
+        return @cash
     end
 
     def items_avaliable()
