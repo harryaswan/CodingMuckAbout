@@ -66,6 +66,7 @@ class Cafe
 
     def unorder(item_as_string)
         if @selected_table
+            binding.pry
             if tmp_item = @menu.has(item_as_string)
                 @tables[@selected_table].unorder(tmp_item)
             else

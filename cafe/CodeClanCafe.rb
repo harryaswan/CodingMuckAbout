@@ -5,8 +5,9 @@ require_relative("Table")
 require_relative("Order")
 require_relative("Menu")
 require_relative("Item")
+require('pry-byebug')
 
-
+#
 # target = ARGV.join ' '
 # puts "Args: #{target}"
 
@@ -14,3 +15,5 @@ puts "\nWelcome to Cafe CodeClan..."
 
 con = CafeConsole.new()
 con.start
+
+require 'pry'
