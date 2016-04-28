@@ -34,17 +34,17 @@ class CafeConsole < ConsoleUI
         when "unselecttable", "ust"
             @errors = @cafe.unselect_table()
         when "order"
-            @errors = @cafe.order(uString[1].to_sym)
+            @errors = @cafe.order(uString[1])
         when "unorder"
-            @errors = @cafe.unorder(uString[1].to_sym)
+            @errors = @cafe.unorder(uString[1])
         when "vieworder", "vo"
             @errors = @cafe.view_order()
         when "items"
             @errors = @cafe.items_avaliable()
         when "additem", "addi"
-            @errors = @cafe.add_item(uString[1].to_sym, uString[2].to_f)
+            @errors = @cafe.add_item(uString[1], uString[2])
         when "removeitem", "remi"
-            @errors = @cafe.remove_item(uString[1].to_sym)
+            @errors = @cafe.remove_item(uString[1])
         when "pay"
             @errors = @cafe.pay(uString[1])
         when "cleartable", "clear"
@@ -62,9 +62,9 @@ class CafeConsole < ConsoleUI
         end
 
         if @errors
-            if @errors.is_a? Hash
+            if @errors[0].is_a? Item
                 puts "******"
-                @errors.each { |f, c| puts "#{f} £#{c}" }
+                @errors.each { |a| puts "#{a.name} £#{a.price}" }
                 puts "******"
             else
                 puts "** #{@errors} **"

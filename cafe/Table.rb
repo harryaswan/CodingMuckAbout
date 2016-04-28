@@ -32,9 +32,12 @@ class Table
 
     def pay(ppl, items)
         total = 0
-        @order.viewAllItems.each { |a|
-            total += items[a]
-        }
+        # @order.viewAllItems.each { |a|
+        #     total += items[a]
+        # }
+        for i in @order.viewAllItems
+            total += i.price
+        end
         return total/ppl.round(2)
     end
 

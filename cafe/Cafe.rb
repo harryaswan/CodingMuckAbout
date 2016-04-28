@@ -2,7 +2,7 @@ class Cafe
     def initialize
         @selected_table = nil
         @tables = []
-        @items = Items.new
+        @menu = Menu.new
         @cash = 0.00
     end
 
@@ -41,21 +41,28 @@ class Cafe
         return @selected_table ? "Table #{@selected_table} is currently selected" : "No table is currently selected"
     end
 
-    def order(item)
+    def order(item_as_string)
         if @selected_table
-            if (items_avaliable().key?(item))
-                @tables[@selected_table].order(item)
+
+            if item_avaliable = @menu.has(item_as_string)
+                @tables[@selected_table].order(item_avaliable)
             else
-                return "The item you have tried to order has not been created... try additem first"
+                return "The item you have tried to order does not exist yet"
             end
+
+            # if (items_avaliable().key?(item))
+            #     @tables[@selected_table].order(item)
+            # else
+            #     return "The item you have tried to order has not been created... try additem first"
+            # end
         else
             return "You must select a table first..."
         end
     end
 
-    def unorder(item)
+    def unorder(item_as_string)
         if @selected_table
-            @tables[@selected_table].unorder(item)
+            @tables[@selected_table].unorder(@menu.has(item_as_string))
         else
             return "You must select a table first..."
         end
@@ -65,7 +72,7 @@ class Cafe
 
         order_string = "\n"
 
-        @tables[@selected_table].view_ordered_items().each { |x| order_string << "* #{x.to_s} \n"}
+        @tables[@selected_table].view_ordered_items().each { |x| order_string << "* #{x.name.to_s} \n"}
 
         return order_string
 
@@ -101,14 +108,22 @@ class Cafe
     end
 
     def items_avaliable()
-        @items.getItems()
+        @menu.get_items()
     end
 
-    def add_item(item, price)
-        @items.add(item, price)
+    def add_item(name, price)
+        @menu.add_item(Item.new(name, price.to_f))
     end
 
     def remove_item(item)
-        @items.delete(item)
+        @menu.remove_item(item)
+    end
+
+    def create_items() #temp - will load in from file
+
+        @menu.add_item("Pizza", "4.99")
+        @menu.add_item("Cola", "1.99")
+        @menu.add_item("Water", "0.00")
+
     end
 end
