@@ -173,11 +173,12 @@ class ConsoleUI                                 #ConsoleUI is the object that wi
         when "help"
             printHelp
         when "exit", "end"
-            false    #returning false tells the program the user no longers wishes to run the pogram so therefore should terminate
+            return false    #returning false tells the program the user no longers wishes to run the pogram so therefore should terminate
         else                #failing to find a matching command will print the help menu automaticly to try and aid the user
             puts "Not a recognised command...."
             printHelp
         end
+        return true
     end
 
 end #end of ConsoleUI Class

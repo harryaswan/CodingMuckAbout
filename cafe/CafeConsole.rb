@@ -26,7 +26,7 @@ class CafeConsole < ConsoleUI
         when "addtable", "add"
             @errors = @cafe.add_table()
         when "seattable", "seat"
-            @errors = @cafe.seat_table(uString[1].to_i, uString[2].to_i)
+            @errors = @cafe.seat_table(uString[1], uString[2])
         when "selecttable", "selt"
             @errors = @cafe.select_table(uString[1].to_i)
         when "viewselectedtable", "vst"
@@ -64,19 +64,19 @@ class CafeConsole < ConsoleUI
         if @errors
             if @errors.is_a? Float
                 puts "£#{@errors}"
-            elsif @errors[0].is_a? Item
-                puts "******"
-                @errors.each { |a|
-                    print "#{a.name} £#{a.price}"
-                    if a.gluten_free
-                        print " (G)"
-                    end
-                    if a.vegie
-                        print " (V)"
-                    end
-                    print "\n"
-                }
-                puts "******"
+            # elsif @errors[0].is_a? Item
+            #     puts "******"
+            #     @errors.each { |a|
+            #         print "#{a.name} £#{a.price}"
+            #         if a.gluten_free
+            #             print " (G)"
+            #         end
+            #         if a.vegie
+            #             print " (V)"
+            #         end
+            #         print "\n"
+            #     }
+            #     puts "******"
             else
                 puts "** #{@errors} **"
             end

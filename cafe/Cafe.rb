@@ -18,11 +18,16 @@ class Cafe
     end
 
     def seat_table(num, ppl)
+        if num == ""
+            num = @selected_table
+        else
+            num = num.to_i
+        end
         if num < @tables.length
-            if ppl == 0
+            if ppl.to_i == 0
                 ppl = 1
             end
-            @tables[num].new(ppl)
+            @tables[num].new(ppl.to_i)
             return "Table #{num} has been seated with #{ppl} customer(s)"
         else
             return "Sorry but table #{num} has not been setup...\nTry adding the table to the cafe first"
@@ -45,7 +50,7 @@ class Cafe
         return @selected_table ? "Table #{@selected_table} is currently selected" : "No table is currently selected"
     end
 
-    def order(item_as_string)
+    def order(item_as_string="pizza")
         if @selected_table
 
             if item_avaliable = @menu.has(item_as_string)
@@ -54,11 +59,6 @@ class Cafe
                 return "The item you have tried to order does not exist yet"
             end
 
-            # if (items_avaliable().key?(item))
-            #     @tables[@selected_table].order(item)
-            # else
-            #     return "The item you have tried to order has not been created... try additem first"
-            # end
         else
             return "You must select a table first..."
         end
@@ -66,7 +66,11 @@ class Cafe
 
     def unorder(item_as_string)
         if @selected_table
-            @tables[@selected_table].unorder(@menu.has(item_as_string))
+            if tmp_item = @menu.has(item_as_string)
+                @tables[@selected_table].unorder(tmp_item)
+            else
+                return "Sorry, can't seem to find that item"
+            end
         else
             return "You must select a table first..."
         end
@@ -76,7 +80,7 @@ class Cafe
 
         if @selected_table
             order_string = "\n"
-            @tables[@selected_table].view_ordered_items().each { |x| order_string << "* #{x.name.to_s} \n"}
+            @tables[@selected_table].view_ordered_items().each { |x| order_string << "* #{x.name.to_s} --- #{x} \n"}
             return order_string
         else
             return "You must select a table first..."

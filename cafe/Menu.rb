@@ -31,8 +31,9 @@ class Menu
     end
 
     def has(item_as_string)
-        for item in @items
+        for item in @items.reverse
             if item.name.downcase == item_as_string.downcase
+                puts "i: #{item}"
                 return item
             end
         end

@@ -2,7 +2,6 @@ class Table
 
     def initialize(id) # , max_ppl)
         @table = id
-        # @max_people = max_ppl
         @sitting = 0
         @order = nil
     end
@@ -32,9 +31,6 @@ class Table
 
     def pay(ppl, items)
         total = 0
-        # @order.viewAllItems.each { |a|
-        #     total += items[a]
-        # }
         for i in @order.viewAllItems
             total += i.price
         end
