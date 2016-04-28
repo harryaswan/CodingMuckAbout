@@ -39,8 +39,8 @@ class CafeConsole < ConsoleUI
             @errors = @cafe.unorder(uString[1])
         when "vieworder", "vo"
             @errors = @cafe.view_order()
-        when "items"
-            @errors = @cafe.items_avaliable()
+        when "menu"
+            @errors = @cafe.view_menu()
         when "additem", "addi"
             @errors = @cafe.add_item(uString[1], uString[2])
         when "removeitem", "remi"
@@ -48,7 +48,7 @@ class CafeConsole < ConsoleUI
         when "pay"
             @errors = @cafe.pay(uString[1])
         when "cleartable", "clear"
-            @errors = @cafe.clear_table(uString[1])
+            @errors = @cafe.clear_table()
         when "cash"
             @errors = @cafe.cash()
         when "help"
@@ -62,9 +62,20 @@ class CafeConsole < ConsoleUI
         end
 
         if @errors
-            if @errors[0].is_a? Item
+            if @errors.is_a? Float
+                puts "£#{@errors}"
+            elsif @errors[0].is_a? Item
                 puts "******"
-                @errors.each { |a| puts "#{a.name} £#{a.price}" }
+                @errors.each { |a|
+                    print "#{a.name} £#{a.price}"
+                    if a.gluten_free
+                        print " (G)"
+                    end
+                    if a.vegie
+                        print " (V)"
+                    end
+                    print "\n"
+                }
                 puts "******"
             else
                 puts "** #{@errors} **"

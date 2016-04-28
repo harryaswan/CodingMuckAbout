@@ -4,6 +4,7 @@ class Cafe
         @tables = []
         @menu = Menu.new
         @cash = 0.00
+        create_items()
     end
 
     def set_tables(num)
@@ -18,8 +19,11 @@ class Cafe
 
     def seat_table(num, ppl)
         if num < @tables.length
+            if ppl == 0
+                ppl = 1
+            end
             @tables[num].new(ppl)
-            return "Table #{num} has been seated with #{ppl} people"
+            return "Table #{num} has been seated with #{ppl} customer(s)"
         else
             return "Sorry but table #{num} has not been setup...\nTry adding the table to the cafe first"
         end
@@ -70,11 +74,13 @@ class Cafe
 
     def view_order()
 
-        order_string = "\n"
-
-        @tables[@selected_table].view_ordered_items().each { |x| order_string << "* #{x.name.to_s} \n"}
-
-        return order_string
+        if @selected_table
+            order_string = "\n"
+            @tables[@selected_table].view_ordered_items().each { |x| order_string << "* #{x.name.to_s} \n"}
+            return order_string
+        else
+            return "You must select a table first..."
+        end
 
     end
 
@@ -107,12 +113,12 @@ class Cafe
         return @cash
     end
 
-    def items_avaliable()
+    def view_menu()
         @menu.get_items()
     end
 
-    def add_item(name, price)
-        @menu.add_item(Item.new(name, price.to_f))
+    def add_item(name, price, glu=false, veg=false)
+        @menu.add_item(Item.new(name, price.to_f, glu, veg))
     end
 
     def remove_item(item)
@@ -121,9 +127,9 @@ class Cafe
 
     def create_items() #temp - will load in from file
 
-        @menu.add_item("Pizza", "4.99")
-        @menu.add_item("Cola", "1.99")
-        @menu.add_item("Water", "0.00")
+        @menu.add_item(Item.new("Pizza", "4.99"))
+        @menu.add_item(Item.new("Cola", "1.99"))
+        @menu.add_item(Item.new("Water", "0.00", true, true))
 
     end
 end

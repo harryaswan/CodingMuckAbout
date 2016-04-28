@@ -1,10 +1,12 @@
 class Item
 
-    attr_accessor( :name, :price )
+    attr_accessor( :name, :price, :gluten_free, :vegie )
 
-    def initialize(name = "", price = 0.0)
+    def initialize(name, price, gluten_free=false, vegie=false)
         @name = name
-        @price = price
+        @price = price.to_f
+        @gluten_free = gluten_free
+        @vegie = vegie
 
         # ADD IN: a glutenFree & vegie bool's
         # => print a G or a V next to the item in the menu
@@ -21,7 +23,7 @@ class Item
     end
 
     def to_h()
-        return {name: @name, price: @price}
+        return {name: @name, price: @price, gluten_free: @gluten_free, vegie: @vegie}
     end
 
     # def getItems()
