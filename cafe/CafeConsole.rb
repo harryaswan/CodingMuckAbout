@@ -45,11 +45,13 @@ class CafeConsole < ConsoleUI
             @errors = @cafe.add_item(uString[1], uString[2])
         when "removeitem", "remi"
             @errors = @cafe.remove_item(uString[1])
-        when "pay"
-            @errors = @cafe.pay(uString[1])
+        when "saveitems"
+            @errors = @cafe.save_items()
+        when "bill", "pay"
+            @errors = @cafe.bill(uString[1])
         when "cleartable", "clear"
             @errors = @cafe.clear_table()
-        when "cash"
+        when "cash", "bank"
             @errors = @cafe.cash()
         when "help"
             self.printHelp
@@ -64,19 +66,27 @@ class CafeConsole < ConsoleUI
         if @errors
             if @errors.is_a? Float
                 puts "£#{@errors}"
-            # elsif @errors[0].is_a? Item
-            #     puts "******"
-            #     @errors.each { |a|
-            #         print "#{a.name} £#{a.price}"
-            #         if a.gluten_free
-            #             print " (G)"
-            #         end
-            #         if a.vegie
-            #             print " (V)"
-            #         end
-            #         print "\n"
-            #     }
-            #     puts "******"
+            elsif @errors.is_a? Array
+                if @errors[0].is_a? Item
+                    puts "******************"
+                    @errors.each { |a|
+                        print "#{a.name} £#{a.price}"
+                        if a.gluten_free
+                            print " (G)"
+                        end
+                        if a.vegie
+                            print " (V)"
+                        end
+                        print "\n"
+                    }
+                    puts "******************"
+                else
+                    puts "******"
+                    for x in @errors
+                        puts x
+                    end
+                    puts "******"
+                end
             else
                 puts "** #{@errors} **"
             end
@@ -96,11 +106,12 @@ class CafeConsole < ConsoleUI
         puts "order [x]                 : adds item [x] to the selected table's order"
         puts "unorder [x]               : revoves item [x] from the selected table's order"
         puts "vieworder | vo            : returns the selected tables order"
-        puts "items                     : returns a list of the items avaliable for order"
+        puts "pay | bill [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party"
+        puts "menu                      : returns the menu of the items avaliable for order"
         puts "additem | addi [x] [p]    : adds a new item [x] and it's price [p] to the list of items avaliable for order"
         puts "removeitem | remi [x]     : removes item [x] from the list of items avaliable to order"
-        puts "pay [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party"
         puts "cleartable | clear        : clear the table and add the money from the bill to the Cafe cash"
+        puts "savemenu                  : saves the menu to a text file, this will be loaded in on start up so you don't loose the items"
         puts "cash                      : returns the total cash brought in through all the tables that have been cleared"
         puts "help                      : prints out this menu"
         puts "exit | close : will close the programme and the cafe"

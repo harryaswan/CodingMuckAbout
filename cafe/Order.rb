@@ -9,7 +9,6 @@ class Order
         @items.push(new_item)
     end
     def removeItem(old_item)
-        puts "a: #{old_item}"
         @items.delete_at(@items.index(old_item))
     end
     def viewAllItems()

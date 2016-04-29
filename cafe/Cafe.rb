@@ -50,15 +50,17 @@ class Cafe
         return @selected_table ? "Table #{@selected_table} is currently selected" : "No table is currently selected"
     end
 
-    def order(item_as_string="pizza")
+    def order(item_as_string)
         if @selected_table
-
-            if item_avaliable = @menu.has(item_as_string)
-                @tables[@selected_table].order(item_avaliable)
+            if item_as_string != "" && item_as_string != nil
+                if item_avaliable = @menu.has(item_as_string)
+                    @tables[@selected_table].order(item_avaliable)
+                else
+                    return "The item you have tried to order does not exist yet"
+                end
             else
-                return "The item you have tried to order does not exist yet"
+                return "You have not entered a item to order..."
             end
-
         else
             return "You must select a table first..."
         end
@@ -89,18 +91,25 @@ class Cafe
 
     end
 
-    def pay(ppl)
-        if ppl == "" || ppl.to_i == 0
-            ppl = 1
-        end
+    def bill(ppl)
+        if @selected_table
+            if ppl == "" || ppl.to_i == 0
+                ppl = 1
+            end
 
-        return @tables[@selected_table].pay(ppl.to_i, items_avaliable())
+            return @tables[@selected_table].pay(ppl.to_i, view_menu())
+        else
+            return "You must select a table first..."
+        end
     end
 
-    def clear_table(paid=true)
+    def clear_table()
         if @selected_table
-            cash_in(pay(1))
-            return cash()
+            cash_in(bill(1))
+            @tables.delete_at(@selected_table)
+            unselect_table()
+            return "Table has been cleared away..."
+            # TODO: This is deleting the table, need to clear order items instead
         else
             return "Please select a table to clear"
         end
@@ -119,7 +128,7 @@ class Cafe
     end
 
     def view_menu()
-        @menu.get_items()
+        return @menu.get_items()
     end
 
     def add_item(name, price, glu=false, veg=false)
@@ -132,9 +141,40 @@ class Cafe
 
     def create_items() #temp - will load in from file
 
-        @menu.add_item(Item.new("Pizza", "4.99"))
-        @menu.add_item(Item.new("Cola", "1.99"))
-        @menu.add_item(Item.new("Water", "0.00", true, true))
+        # @menu.add_item(Item.new("Pizza", "4.99"))
+        # @menu.add_item(Item.new("Cola", "1.99"))
+        # @menu.add_item(Item.new("Water", "0.00", true, true))
 
+        # TODO: if file.exist? else create default items (water, milk)
+        fname = "items/cafe_items.txt"
+        somefile = File.open(fname, "r")
+
+        somefile.readlines.each { |line|
+            tmp = line.chomp.split(",")
+
+            for i in tmp
+                if i == "true"
+                    tmp[tmp.index(i)] = true
+                elsif i == "false"
+                    tmp[tmp.index(i)] = false
+                end
+            end
+
+            @menu.add_item(Item.new(tmp[0], tmp[1], tmp[2], tmp[3]))
+        }
+        somefile.close
+
+
+
+    end
+
+    def save_items()
+        fname = "items/cafe_items.txt"
+        somefile = File.open(fname, "w")
+
+        for i in @menu.get_items()
+            somefile.puts i.to_csv()
+        end
+        somefile.close
     end
 end
