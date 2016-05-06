@@ -91,7 +91,6 @@ class CafeConsole < ConsoleUI
                 puts "** #{@errors} **"
             end
         end
-
     end
 
     def printHelp

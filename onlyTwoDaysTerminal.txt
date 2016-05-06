@@ -1,0 +1,4532 @@
+Last login: Tue Apr 26 14:35:10 on ttys001
+➜  ~ saveplay
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+➜  coding git:(master) ruby orders.rb 
+orders.rb:5: syntax error, unexpected '!', expecting keyword_end
+orders.rb:58: syntax error, unexpected tSYMBEG, expecting '}'
+            :cola => 1.99,
+             ^
+orders.rb:60: syntax error, unexpected =>, expecting keyword_end
+            :water => 0.00
+                     ^
+orders.rb:74: class definition in method body
+orders.rb:88: syntax error, unexpected keyword_end, expecting ')'
+orders.rb:93: syntax error, unexpected end-of-input, expecting keyword_end
+➜  coding git:(master) ✗ ruby orders.rb
+orders.rb:58: syntax error, unexpected tSYMBEG, expecting '}'
+            :cola => 1.99,
+             ^
+orders.rb:60: syntax error, unexpected =>, expecting keyword_end
+            :water => 0.00
+                     ^
+orders.rb:74: class definition in method body
+orders.rb:88: syntax error, unexpected keyword_end, expecting ')'
+orders.rb:93: syntax error, unexpected end-of-input, expecting keyword_end
+➜  coding git:(master) ✗ ruby orders.rb
+orders.rb:58: syntax error, unexpected tIDENTIFIER, expecting '}'
+            cola: 1.99,
+                ^
+orders.rb:60: syntax error, unexpected ':', expecting keyword_end
+            water: 0.00
+                  ^
+orders.rb:74: class definition in method body
+orders.rb:88: syntax error, unexpected keyword_end, expecting ')'
+orders.rb:93: syntax error, unexpected end-of-input, expecting keyword_end
+➜  coding git:(master) ✗ ruby orders.rb
+orders.rb:88: syntax error, unexpected keyword_end, expecting ')'
+orders.rb:93: syntax error, unexpected end-of-input, expecting keyword_end
+➜  coding git:(master) ✗ ruby orders.rb
+orders.rb:93: syntax error, unexpected end-of-input, expecting keyword_end
+➜  coding git:(master) ✗ ruby orders.rb
+
+> settables 4
+orders.rb:29:in `set_tables': undefined method `put' for #<OrderConsole:0x007fd8a2072ee8 @running=true> (NoMethodError)
+Did you mean?  puts
+               putc
+	from orders.rb:10:in `in'
+	from /Users/user/Documents/coding/console.rb:23:in `start'
+	from orders.rb:93:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> settables 4
+Number of tables to setup: 4
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+➜  coding git:(master) ✗ ruby orders.rb
+
+> exit      
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+nil is false
+
+> wxit
+'["wxit"]' is not a recognised command...
+
+Console App 1.0
+---------------
+help : prints out this menu
+exit : will close the programme
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+➜  coding git:(master) ✗ ruby orders.rb
+➜  coding git:(master) ✗ ruby orders.rb
+
+> viewselectedtable
+No table is currently selected
+
+> selecttable
+
+> selecttable 2
+
+> viewselectedtable
+Table 2 is currently selected
+
+> selecttable
+
+> viewselectedtable
+Table 0 is currently selected
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> selecttable
+a: 
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> selecttable
+a: 
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+orders.rb:21: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...able = uString[1].to_i : puts "Please ensure you enter a tab...
+...                               ^
+➜  coding git:(master) ✗ ruby orders.rb
+
+> selecttable
+a: 
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> selecttable
+a: 
+Please ensure you enter a table number
+
+> viewselectedtable
+No table is currently selected
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> selecttable
+Please ensure you enter a table number
+
+> viewselectedtable
+No table is currently selected
+
+> selecttable 2
+Please ensure you enter a table number
+
+> viewselectedtable
+No table is currently selected
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> viewselectedtable
+No table is currently selected
+
+> selecttable
+a: 
+Please ensure you enter a table number
+
+> selecttable 2
+a: 2
+Please ensure you enter a table number
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> selecttable 2
+a: 2
+orders.rb:21:in `in': undefined method `empty' for "2":String (NoMethodError)
+Did you mean?  empty?
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:110:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> selecttable 2
+a: 2
+
+> viewselectedtable
+Table 2 is currently selected
+
+> unselecttable
+
+> viewselectedtable
+No table is currently selected
+
+> selecttable 2
+a: 2
+
+> viewselectedtable
+Table 2 is currently selected
+
+> unselecttable 2
+
+> viewselectedtable
+No table is currently selected
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> vst
+'["vst"]' is not a recognised command...
+
+Console App 1.0
+---------------
+help : prints out this menu
+exit : will close the programme
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> vst
+No table is currently selected
+
+> selt 1
+
+> vst
+Table 1 is currently selected
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby test.rb 
+Test: 0
+➜  coding git:(master) ✗ ruby test.rb
+Test: 0
+Test: 1
+➜  coding git:(master) ✗ ruby test.rb
+Test: 5
+A: 0
+A: 1
+A: 2
+A: 3
+A: 4
+➜  coding git:(master) ✗ ruby test.rb
+Test: 5
+A: 0
+A: 1
+A: 2
+A: 3
+A: 4
+➜  coding git:(master) ✗ ruby orders.rb
+
+> opencafe
+
+> sett 5
+** 5 tables have been set up. **
+
+> seat 1
+orders.rb:78:in `seat_table': undefined method `new' for 1:Fixnum (NoMethodError)
+Did you mean?  next
+	from orders.rb:24:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:175:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> opencafe
+
+> sett 5
+** 5 tables have been set up. **
+
+> seat 1 2
+orders.rb:78:in `seat_table': undefined method `new' for 1:Fixnum (NoMethodError)
+Did you mean?  next
+	from orders.rb:24:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:175:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> opencafe
+
+> sett 5
+** 5 tables have been set up. **
+
+> seat 1 2
+orders.rb:119:in `new': undefined method `length' for nil:NilClass (NoMethodError)
+	from orders.rb:78:in `seat_table'
+	from orders.rb:24:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:175:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> opencafe
+
+> items
+** {:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0} **
+
+> order pizza
+orders.rb:32:in `in': undefined method `order' for #<Cafe:0x007ff111958c60> (NoMethodError)
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:175:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> order pizza
+orders.rb:32:in `in': undefined method `order' for nil:NilClass (NoMethodError)
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:208:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> sett 5
+orders.rb:20:in `in': undefined method `set_tables' for nil:NilClass (NoMethodError)
+Did you mean?  set_trace_func
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:208:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> sett 5
+** 5 tables have been set up. **
+
+> order pizza
+** You must select a table first... **
+
+> selt 1
+** 1 **
+
+> 
+'' is not a recognised command...
+
+Console App 1.0
+---------------
+help : prints out this menu
+exit : will close the programme
+
+> order pizza
+** The table has not been seated.... **
+
+> seat 1 4
+** #<Order:0x007fb2e305f0f8> **
+
+> order pizza
+** [:pizza] **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> sett 5
+** 5 tables have been set up. **
+
+> seat 1 2
+** #<Order:0x007ff4b294a940> **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> sett 5
+** 5 tables have been set up. **
+
+> seat 1 2
+** Table 1 has been seated with 2 people **
+
+> selt 1
+** 1 **
+
+> order pizza
+** [:pizza] **
+
+> vieworder
+orders.rb:121:in `view_order': undefined method `[]' for nil:NilClass (NoMethodError)
+	from orders.rb:34:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:223:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> sett 5
+** 5 tables have been set up. **
+
+> seat 1 3
+** Table 1 has been seated with 3 people **
+
+> selt 1
+** 1 **
+
+> order pizza
+** [:pizza] **
+
+> items   
+** {:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0} **
+
+> order cola
+** [:pizza, :cola] **
+
+> order pasta
+** [:pizza, :cola, :pasta] **
+
+> order water
+** [:pizza, :cola, :pasta, :water] **
+
+> vo   
+** * pizza 
+* cola 
+* pasta 
+* water 
+ **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> additem sausage
+orders.rb:38:in `in': undefined method `add_items' for #<Cafe:0x007fc2341529f0> (NoMethodError)
+Did you mean?  add_item
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:223:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> addi sausage
+orders.rb:219:in `add': wrong number of arguments (given 1, expected 2) (ArgumentError)
+	from orders.rb:134:in `add_item'
+	from orders.rb:38:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:229:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> addi sausage 6.99
+orders.rb:219:in `add': wrong number of arguments (given 1, expected 2) (ArgumentError)
+	from orders.rb:134:in `add_item'
+	from orders.rb:38:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:229:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> addi sausage 6.99
+** 6.99 **
+
+> items
+** {:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0, :sausage=>6.99} **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ saveplay
+[master ffe70ea] autosave of play code
+ 3 files changed, 225 insertions(+), 8 deletions(-)
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.79 KiB | 0 bytes/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+To git@github.com:harryaswan/CodingMuckAbout.git
+   6021c8d..ffe70ea  master -> master
+➜  coding git:(master) irb
+irb(main):001:0> Date.today
+NameError: uninitialized constant Date
+Did you mean?  Data
+	from (irb):1
+	from /Users/user/.rbenv/versions/2.3.0/bin/irb:11:in `<main>'
+irb(main):002:0> include 'date'
+TypeError: wrong argument type String (expected Module)
+	from (irb):2:in `include'
+	from (irb):2
+	from /Users/user/.rbenv/versions/2.3.0/bin/irb:11:in `<main>'
+irb(main):003:0> require 'date'
+=> true
+irb(main):004:0> Date.today
+=> #<Date: 2016-04-27 ((2457506j,0s,0n),+0s,2299161j)>
+irb(main):005:0> Date.today
+=> #<Date: 2016-04-27 ((2457506j,0s,0n),+0s,2299161j)>
+irb(main):006:0> ((Date.today - Date.parse(dob))/365) 
+NameError: undefined local variable or method `dob' for main:Object
+	from (irb):6
+	from /Users/user/.rbenv/versions/2.3.0/bin/irb:11:in `<main>'
+irb(main):007:0> ((Date.today - Date.parse("30th Jan 1996"))/365)
+=> (7393/365)
+irb(main):008:0> 7393/365
+=> 20
+irb(main):009:0> 7393/365.to_f
+=> 20.254794520547946
+irb(main):010:0> exit
+➜  coding git:(master) ruby orders.rb
+
+> test
+'test' is not a recognised command...
+
+Console App 1.0
+---------------
+help : prints out this menu
+exit : will close the programme
+
+> help
+
+Console App 1.0
+---------------
+help : prints out this menu
+exit : will close the programme
+
+> sett 5
+** 5 tables have been set up. **
+
+> seat 1 4
+** Table 1 has been seated with 4 people **
+
+> selt 1
+** 1 **
+
+> items
+** {:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0} **
+
+> addi cake 1.99
+** 1.99 **
+
+> items
+** {:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0, :cake=>1.99} **
+
+> exit
+Adios!
+➜  coding git:(master) saveplay
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+➜  coding git:(master) ruby orders.rb
+
+> sett 5
+** 5 tables have been set up. **
+
+> selt 0
+** 0 **
+
+> order pizza
+** The table has not been seated.... **
+
+> seat 0
+** Table 0 has been seated with 0 people **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> order pizza
+** [:pizza] **
+
+> order water
+** [:pizza, :water] **
+
+> vieworder
+** 
+* pizza 
+* water 
+
+ **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 1 2
+** Sorry but table 1 has not been setup...
+Try adding the table to the cafe first **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 1 2
+** Sorry but table 1 has not been setup...
+Try adding the table to the cafe first **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ sett 1
+zsh: command not found: sett
+➜  coding git:(master) ✗ seat 0 2
+zsh: command not found: seat
+➜  coding git:(master) ✗ ruby orders.rb
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> seat 1 2
+** Sorry but table 1 has not been setup...
+Try adding the table to the cafe first **
+
+> selt 0
+** 0 **
+
+> vst
+** Table 0 is currently selected **
+
+> items
+** {:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0} **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ items
+zsh: command not found: items
+➜  coding git:(master) ✗ ruby orders.rb
+
+> items
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> items
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> items
+-{:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0}
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb 
+
+> items
+-{:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0}
+=Hash
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> items
+-{:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0}
+=Hash
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> items
+-{:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0}
+=Hash
+******
+orders.rb:59:in `in': undefined method `each' for nil:NilClass (NoMethodError)
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:237:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+> items
+-{:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0}
+=Hash
+******
+pizza 4.99
+steak_pie 6.99
+pasta 7.99
+cola 1.99
+lemonade 1.99
+water 0.0
+******
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> items
+-{:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0}
+=Hash
+******
+pizza £4.99
+steak_pie £6.99
+pasta £7.99
+cola £1.99
+lemonade £1.99
+water £0.0
+******
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> items
+******
+pizza £4.99
+steak_pie £6.99
+pasta £7.99
+cola £1.99
+lemonade £1.99
+water £0.0
+******
+
+> vst
+** No table is currently selected **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+> vst
+** No table is currently selected **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+Welcome to Cafe CodeClan...
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 2
+** 2 tables have been set up. **
+
+> seat 1 4
+** Table 1 has been seated with 4 people **
+
+> selt 1
+** 1 **
+
+> order pizza
+** [:pizza] **
+
+> order pizza
+** [:pizza, :pizza] **
+
+> order water
+** [:pizza, :pizza, :water] **
+
+> order cola
+** [:pizza, :pizza, :water, :cola] **
+
+> items
+******
+pizza £4.99
+steak_pie £6.99
+pasta £7.99
+cola £1.99
+lemonade £1.99
+water £0.0
+******
+
+> pay
+orders.rb:191:in `pay': undefined method `each' for #<Order:0x007fbe32860040 @items=[:pizza, :pizza, :water, :cola]> (NoMethodError)
+	from orders.rb:142:in `pay'
+	from orders.rb:42:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:249:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> selt 0
+** 0 **
+
+> order pizza
+** [:pizza] **
+
+> order pizza
+** [:pizza, :pizza] **
+
+> order cola
+** [:pizza, :pizza, :cola] **
+
+> order water
+** [:pizza, :pizza, :cola, :water] **
+
+> pay
+** Infinity **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 2
+** 2 tables have been set up. **
+
+> seat 1 2
+** Table 1 has been seated with 2 people **
+
+> selt 1
+** 1 **
+
+> order pizza
+** [:pizza] **
+
+> order water
+** [:pizza, :water] **
+
+> pay
+Total: 4.99 + 4.99
+Total: 4.99 + 0.0
+** Infinity **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 2
+** 2 tables have been set up. **
+
+> seat 1 2
+** Table 1 has been seated with 2 people **
+
+> selt 1
+** 1 **
+
+> order pizza
+** [:pizza] **
+
+> order water
+** [:pizza, :water] **
+
+> pay
+Total: 4.99 + 4.99
+Total: 4.99 + 0.0
+** 4.99 **
+
+> pay 2
+Total: 4.99 + 4.99
+Total: 4.99 + 0.0
+** 2.495 **
+
+> pay 3
+Total: 4.99 + 4.99
+Total: 4.99 + 0.0
+** 1.6633333333333333 **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> selt 0
+** 0 **
+
+> order pizza
+** The table has not been seated.... **
+
+> order water
+** The table has not been seated.... **
+
+> order pizza
+** The table has not been seated.... **
+
+> vo 
+orders.rb:193:in `view_ordered_items': undefined method `viewAllItems' for nil:NilClass (NoMethodError)
+	from orders.rb:138:in `view_order'
+	from orders.rb:34:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:259:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 2
+** 2 tables have been set up. **
+
+> selt 1
+** 1 **
+
+> seat 1 2
+** Table 1 has been seated with 2 people **
+
+> order pizza
+** [:pizza] **
+
+> order water
+** [:pizza, :water] **
+
+> vo
+** 
+* pizza 
+* water 
+ **
+
+> help
+
+Cafe CodeClan
+---------------
+settables | sett [x]      : sets up [x] number of tables in the cafe
+addtable | add            : adds a new table and will return the table number
+seattable | seat [x] [y]  : seats [y] number of people at table [x]
+selecttable | selt [x]    : selects the table [x] so that it can be modified
+viewselectedtable | vst   : returns the table number that is currently selected
+unselecttable | ust       : unselects the current table, you will have to select a new table
+order [x]                 : adds item [x] to the selected table's order
+unorder [x]               : 
+help                      : prints out this menu
+exit | close : will close the programme and the cafe
+
+> exit
+Adios!
+➜  coding git:(master) ✗ help
+zsh: command not found: help
+➜  coding git:(master) ✗ --help
+zsh: command not found: --help
+➜  coding git:(master) ✗ git -help
+Unknown option: -help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+➜  coding git:(master) ✗ git --help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+➜  coding git:(master) ✗ cls
+zsh: command not found: cls
+➜  coding git:(master) ✗ clear
+
+                                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  coding git:(master) ✗ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 2
+** 2 tables have been set up. **
+
+> seat 1 2
+** Table 1 has been seated with 2 people **
+
+> selt 1
+** 1 **
+
+> order pizza
+** [:pizza] **
+
+> order water
+** [:pizza, :water] **
+
+> order pizza
+** [:pizza, :water, :pizza] **
+
+> vo          
+** 
+* pizza 
+* water 
+* pizza 
+ **
+
+> unorder pizza
+** pizza **
+
+> vo
+** 
+* water 
+ **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> help
+
+Cafe CodeClan
+---------------
+settables | sett [x]      : sets up [x] number of tables in the cafe
+addtable | add            : adds a new table and will return the table number
+seattable | seat [x] [y]  : seats [y] number of people at table [x]
+selecttable | selt [x]    : selects the table [x] so that it can be modified
+viewselectedtable | vst   : returns the table number that is currently selected
+unselecttable | ust       : unselects the current table, you will have to select a new table
+order [x]                 : adds item [x] to the selected table's order
+unorder [x]               : revoves item [x] from the selected table's order
+vieworder | vo            : returns the selected tables order
+items                     : returns a list of the items avaliable for order
+additem | addi [x] [p]    : adds a new item [x] and it's price [p] to the list of items avaliable for order
+removeitem | remi [x]     : removes item [x] from the list of items avaliable to order
+pay [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party
+help                      : prints out this menu
+exit | close : will close the programme and the cafe
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby test.rb  
+[nil]%                                               ➜  coding git:(master) ✗ ruby test.rb
+[nil]%                                               ➜  coding git:(master) ✗ ruby test.rb
+["1"]%                                               ➜  coding git:(master) ✗ ruby test.rb
+1%                                                   ➜  coding git:(master) ✗ ruby test.rb
+1%                                                   ➜  coding git:(master) ✗ ruby test.rb
+one%                                                 ➜  coding git:(master) ✗ ruby test.rb
+test
+one
+two
+one
+test
+two
+one
+➜  coding git:(master) ✗ ruby test.rb
+{:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0}
+➜  coding git:(master) ✗ ruby test.rb
+{:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0}
+➜  coding git:(master) ✗ ruby test.rb
+{:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0}
+{:steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0}
+➜  coding git:(master) ✗ ruby test.rb
+test.rb:7: warning: key :pizza is duplicated and overwritten on line 11
+{:pizza=>4.99, :steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0}
+{:steak_pie=>6.99, :pasta=>7.99, :cola=>1.99, :lemonade=>1.99, :water=>0.0}
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 2
+** 2 tables have been set up. **
+
+> seat 1 2
+** Table 1 has been seated with 2 people **
+
+> addi roll 2.34
+** 2.34 **
+
+> items
+******
+pizza £4.99
+steak_pie £6.99
+pasta £7.99
+cola £1.99
+lemonade £1.99
+water £0.0
+roll £2.34
+******
+
+> remi water
+** 0.0 **
+
+> items
+******
+pizza £4.99
+steak_pie £6.99
+pasta £7.99
+cola £1.99
+lemonade £1.99
+roll £2.34
+******
+
+> addi water 0  
+** 0.0 **
+
+> items
+******
+pizza £4.99
+steak_pie £6.99
+pasta £7.99
+cola £1.99
+lemonade £1.99
+roll £2.34
+water £0.0
+******
+
+> order roll
+** You must select a table first... **
+
+> selt 1
+** 1 **
+
+> order water
+** [:water] **
+
+> order water
+** [:water, :water] **
+
+> unorder water
+orders.rb:234:in `delete_at': no implicit conversion from nil to integer (TypeError)
+	from orders.rb:234:in `removeItem'
+	from orders.rb:198:in `unorder'
+	from orders.rb:140:in `unorder'
+	from orders.rb:32:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:271:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 2
+** 2 tables have been set up. **
+
+> selt 2
+** 2 **
+
+> order water
+orders.rb:132:in `order': undefined method `order' for nil:NilClass (NoMethodError)
+	from orders.rb:30:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:271:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 2
+** 2 tables have been set up. **
+
+> selt 2
+** Please ensure you enter a table number **
+
+> selt 1
+** 1 **
+
+> order water
+** The table has not been seated.... **
+
+> seat 1 2
+** Table 1 has been seated with 2 people **
+
+> order water
+** [:water] **
+
+> order water
+** [:water, :water] **
+
+> order pizza
+** [:water, :water, :pizza] **
+
+> order steak_pie
+** [:water, :water, :pizza, :steak_pie] **
+
+> vo
+** 
+* water 
+* water 
+* pizza 
+* steak_pie 
+ **
+
+> order water
+** [:water, :water, :pizza, :steak_pie, :water] **
+
+> unorder water
+** water **
+
+> vo
+** 
+* water 
+* pizza 
+* steak_pie 
+* water 
+ **
+
+>' is not a recognised command...
+'
+Cafe CodeClan
+---------------
+settables | sett [x]      : sets up [x] number of tables in the cafe
+addtable | add            : adds a new table and will return the table number
+seattable | seat [x] [y]  : seats [y] number of people at table [x]
+selecttable | selt [x]    : selects the table [x] so that it can be modified
+viewselectedtable | vst   : returns the table number that is currently selected
+unselecttable | ust       : unselects the current table, you will have to select a new table
+order [x]                 : adds item [x] to the selected table's order
+unorder [x]               : revoves item [x] from the selected table's order
+vieworder | vo            : returns the selected tables order
+items                     : returns a list of the items avaliable for order
+additem | addi [x] [p]    : adds a new item [x] and it's price [p] to the list of items avaliable for order
+removeitem | remi [x]     : removes item [x] from the list of items avaliable to order
+pay [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party
+help                      : prints out this menu
+exit | close : will close the programme and the cafe
+
+> pay
+Total: 0.0 + 0.0
+Total: 4.99 + 4.99
+Total: 11.98 + 6.99
+Total: 11.98 + 0.0
+** 11.98 **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> selt 0
+** 0 **
+
+> order water
+** [:water] **
+
+> order pizza
+** [:water, :pizza] **
+
+> vo
+** 
+* water 
+* pizza 
+ **
+
+> pay
+** The bill is 4.99 **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 2 
+** 2 tables have been set up. **
+
+> selt 1 2
+** 1 **
+
+> seat 1 2
+** Table 1 has been seated with 2 people **
+
+> order water
+** [:water] **
+
+> order pizza
+** [:water, :pizza] **
+
+> vo    
+** 
+* water 
+* pizza 
+ **
+
+> pay
+** The bill is £4.99 **
+
+> order chicken
+** [:water, :pizza, :chicken] **
+
+> vo
+** 
+* water 
+* pizza 
+* chicken 
+ **
+
+> pay
+orders.rb:211:in `+': nil can't be coerced into Float (TypeError)
+	from orders.rb:211:in `block in pay'
+	from orders.rb:210:in `each'
+	from orders.rb:210:in `pay'
+	from orders.rb:161:in `pay'
+	from orders.rb:42:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:270:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> exit
+Adios!
+➜  coding git:(master) ✗ saveplay
+[master f816a0a] autosave of play code
+ 2 files changed, 65 insertions(+), 12 deletions(-)
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.48 KiB | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+To git@github.com:harryaswan/CodingMuckAbout.git
+   ffe70ea..f816a0a  master -> master
+➜  coding git:(master) ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> order water
+** You must select a table first... **
+
+> selt 1
+** Please ensure you enter a table number **
+
+> seat 1 2
+** Sorry but table 1 has not been setup...
+Try adding the table to the cafe first **
+
+> add
+** A new table has been added, it is Table 0 **
+
+> seat 0 1
+** Table 0 has been seated with 1 people **
+
+> selt 0
+** 0 **
+
+> order water
+orders.rb:132:in `order': undefined method `key?' for #<Items:0x007f94a3949ed8> (NoMethodError)
+	from orders.rb:30:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:274:in `<main>'
+➜  coding git:(master) ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> selt 0
+** 0 **
+
+> seat 0
+** Table 0 has been seated with 0 people **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> order water
+** [:water] **
+
+> order paster
+** The item you have tried to order has not been created... try additem first **
+
+> order pasta
+** [:water, :pasta] **
+
+> vo
+** 
+* water 
+* pasta 
+ **
+
+> pay
+** The bill is £7.99 **
+
+> clear
+'clear' is not a recognised command...
+
+Cafe CodeClan
+---------------
+settables | sett [x]      : sets up [x] number of tables in the cafe
+addtable | add            : adds a new table and will return the table number
+seattable | seat [x] [y]  : seats [y] number of people at table [x]
+selecttable | selt [x]    : selects the table [x] so that it can be modified
+viewselectedtable | vst   : returns the table number that is currently selected
+unselecttable | ust       : unselects the current table, you will have to select a new table
+order [x]                 : adds item [x] to the selected table's order
+unorder [x]               : revoves item [x] from the selected table's order
+vieworder | vo            : returns the selected tables order
+items                     : returns a list of the items avaliable for order
+additem | addi [x] [p]    : adds a new item [x] and it's price [p] to the list of items avaliable for order
+removeitem | remi [x]     : removes item [x] from the list of items avaliable to order
+pay [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party
+help                      : prints out this menu
+exit | close : will close the programme and the cafe
+
+> exit 
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 4
+** 4 tables have been set up. **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> seat 3 2
+** Table 3 has been seated with 2 people **
+
+> selt 0 
+** 0 **
+
+> order pizza
+** [:pizza] **
+
+> order cola
+** [:pizza, :cola] **
+
+> ust
+
+> vst
+** No table is currently selected **
+
+> selt 3
+** 3 **
+
+> order steak_pie
+** [:steak_pie] **
+
+> order lemonade
+** [:steak_pie, :lemonade] **
+
+> pay
+** 8.98 **
+
+> clear
+
+> cash
+** 0.0 **
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> settables 5
+** 5 tables have been set up. **
+
+> seat 0 4
+** Table 0 has been seated with 4 people **
+
+> selecttable 0
+** 0 **
+
+> items
+******
+pizza £4.99
+steak_pie £6.99
+pasta £7.99
+cola £1.99
+lemonade £1.99
+water £0.0
+******
+
+> order water
+** [:water] **
+
+> order pizza
+** [:water, :pizza] **
+
+> order lemonade
+** [:water, :pizza, :lemonade] **
+
+> order roll
+** The item you have tried to order has not been created... try additem first **
+
+> additem roll 1.99
+** 1.99 **
+
+> items
+******
+pizza £4.99
+steak_pie £6.99
+pasta £7.99
+cola £1.99
+lemonade £1.99
+water £0.0
+roll £1.99
+******
+
+> vo
+** 
+* water 
+* pizza 
+* lemonade 
+ **
+
+> pay
+** 6.98 **
+
+> clear
+
+> cash
+** 0.0 **
+
+> vst
+** Table 0 is currently selected **
+
+> help
+
+Cafe CodeClan
+---------------
+settables | sett [x]      : sets up [x] number of tables in the cafe
+addtable | add            : adds a new table and will return the table number
+seattable | seat [x] [y]  : seats [y] number of people at table [x]
+selecttable | selt [x]    : selects the table [x] so that it can be modified
+viewselectedtable | vst   : returns the table number that is currently selected
+unselecttable | ust       : unselects the current table, you will have to select a new table
+order [x]                 : adds item [x] to the selected table's order
+unorder [x]               : revoves item [x] from the selected table's order
+vieworder | vo            : returns the selected tables order
+items                     : returns a list of the items avaliable for order
+additem | addi [x] [p]    : adds a new item [x] and it's price [p] to the list of items avaliable for order
+removeitem | remi [x]     : removes item [x] from the list of items avaliable to order
+pay [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party
+cleartable | clear        : clear the table and add the money from the bill to the Cafe cash
+cash                      : returns the total cash brought in through all the tables that have been cleared
+help                      : prints out this menu
+exit | close : will close the programme and the cafe
+
+> exit
+Adios!
+➜  coding git:(master) ✗ saveplay
+[master e54bec3] autosave of play code
+ 1 file changed, 21 insertions(+), 7 deletions(-)
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 595 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To git@github.com:harryaswan/CodingMuckAbout.git
+   f816a0a..e54bec3  master -> master
+➜  coding git:(master) ruby mapping.rb
+This program was created by Harry A. Swan
+createmap     :used to create the map
+setarea       :used to set an area of the map to a terrain
+drawmap       :used to draw the map to the console
+terrains      :used to print the terrains and their codes to the console
+help          :used to print this menu to the console
+exit          :used to close the program
+
+Please note: any input that is expecting an Integer will be converted to 0 if a string is given
+Input:
+exit
+Goodbye....
+➜  coding git:(master) clear
+
+                                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  coding git:(master) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  coding git:(master) clear
+
+                                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  coding git:(master) ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> selt 0
+** 0 **
+
+> order pizza
+** [:pizza] **
+
+> pay
+** 4.99 **
+
+> cleartable
+
+> vo
+** 
+* pizza 
+ **
+
+> ^C/Users/user/Documents/coding/console.rb:23:in `gets': Interrupt
+	from /Users/user/Documents/coding/console.rb:23:in `gets'
+	from /Users/user/Documents/coding/console.rb:23:in `start'
+	from orders.rb:290:in `<main>'
+
+➜  coding git:(master) ✗ atom loops.rb 
+➜  coding git:(master) ✗ ls
+console.rb orders.rb
+mapping.rb test.rb
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> selt 0
+** 0 **
+
+> order pizza
+** [:pizza] **
+
+> vo
+** 
+* pizza 
+ **
+
+> pay
+** 4.99 **
+
+> clear
+old cash: 0.0
+orders.rb:167:in `pay': wrong number of arguments (given 0, expected 1) (ArgumentError)
+	from orders.rb:178:in `clear_table'
+	from orders.rb:44:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:290:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 0 people **
+
+> seat 0 1
+** Table 0 has been seated with 1 people **
+
+> selt 0
+** 0 **
+
+> order pizza
+** [:pizza] **
+
+> order pasta 
+** [:pizza, :pasta] **
+
+> pay
+** 12.98 **
+
+> vo
+** 
+* pizza 
+* pasta 
+ **
+
+> cleartable
+old cash: 0.0
+new cash: 12.98
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> clear
+
+> cleartable
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> clear
+old cash: 0.0
+orders.rb:172:in `[]': no implicit conversion from nil to integer (TypeError)
+	from orders.rb:172:in `pay'
+	from orders.rb:177:in `clear_table'
+	from orders.rb:44:in `in'
+	from /Users/user/Documents/coding/console.rb:24:in `start'
+	from orders.rb:288:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> clear
+
+> exit
+Adios!
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 3
+** 3 tables have been set up. **
+
+> seat 1 4
+** Table 1 has been seated with 4 people **
+
+> selt 1
+** 1 **
+
+> order pizza
+** [:pizza] **
+
+> items
+******
+pizza £4.99
+steak_pie £6.99
+pasta £7.99
+cola £1.99
+lemonade £1.99
+water £0.0
+******
+
+> order water
+** [:pizza, :water] **
+
+> order water
+** [:pizza, :water, :water] **
+
+> unorder water
+** water **
+
+> vieworder 
+** 
+* pizza 
+* water 
+ **
+
+> pay
+** 4.99 **
+
+> cleartable
+** 4.99 **
+
+> cash
+** 4.99 **
+
+> addi toast 0.50
+** 0.5 **
+
+> items
+******
+pizza £4.99
+steak_pie £6.99
+pasta £7.99
+cola £1.99
+lemonade £1.99
+water £0.0
+toast £0.5
+******
+
+> remi toast
+** 0.5 **
+
+> items
+******
+pizza £4.99
+steak_pie £6.99
+pasta £7.99
+cola £1.99
+lemonade £1.99
+water £0.0
+******
+
+> addi toast 0.5
+** 0.5 **
+
+> addi toast 0.5
+** 0.5 **
+
+> items
+******
+pizza £4.99
+steak_pie £6.99
+pasta £7.99
+cola £1.99
+lemonade £1.99
+water £0.0
+toast £0.5
+******
+
+> exit
+Adios!
+➜  coding git:(master) ✗ saveplay
+[master 7b6409a] autosave of play code
+ 1 file changed, 14 insertions(+), 5 deletions(-)
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 449 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To git@github.com:harryaswan/CodingMuckAbout.git
+   e54bec3..7b6409a  master -> master
+➜  coding git:(master) ruby orders.rb
+
+Welcome to Cafe CodeClan...
+orders.rb:107:in `initialize': uninitialized constant Cafe::Items (NameError)
+Did you mean?  Item
+	from orders.rb:7:in `new'
+	from orders.rb:7:in `initialize'
+	from orders.rb:328:in `new'
+	from orders.rb:328:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+orders.rb:307:in `initialize': undefined local variable or method `menu' for #<Items:0x007ff0e214a368> (NameError)
+	from orders.rb:107:in `new'
+	from orders.rb:107:in `initialize'
+	from orders.rb:7:in `new'
+	from orders.rb:7:in `initialize'
+	from orders.rb:328:in `new'
+	from orders.rb:328:in `<main>'
+➜  coding git:(master) ✗ ruby orders.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 5
+** 5 tables have been set up. **
+
+> exit
+
+> exit
+
+> exit
+
+> ^X^C/Users/user/Documents/coding/console.rb:23:in `gets': Interrupt
+	from /Users/user/Documents/coding/console.rb:23:in `gets'
+	from /Users/user/Documents/coding/console.rb:23:in `start'
+	from orders.rb:329:in `<main>'
+
+➜  coding git:(master) cd cafe
+➜  cafe git:(master) atom CafeConsole.rb
+➜  cafe git:(master) atom Cafe.rb
+➜  cafe git:(master) ✗ ls
+Cafe.rb        console.rb
+CafeConsole.rb orders.rb
+➜  cafe git:(master) ✗ atom Table.rb
+➜  cafe git:(master) ✗ atom Menu.rb
+➜  cafe git:(master) ✗ atom Item.rb
+➜  cafe git:(master) ✗ atom Order.rb
+➜  cafe git:(master) ✗ atom CodeClanCafe.rb
+➜  cafe git:(master) ✗ ruby CodeClanCafe.rb
+Args: 
+
+Welcome to Cafe CodeClan...
+
+> exit
+Adios!
+➜  cafe git:(master) ✗ ruby CodeClanCafe.rb test lol
+Args: test lol
+
+Welcome to Cafe CodeClan...
+
+> /Users/user/Documents/coding/cafe/ConsoleUI.rb:23:in `gets': No such file or directory @ rb_sysopen - test (Errno::ENOENT)
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:23:in `gets'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:23:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(master) ✗ ruby CodeClanCafe.rb test   
+Args: test
+
+Welcome to Cafe CodeClan...
+
+> /Users/user/Documents/coding/cafe/ConsoleUI.rb:23:in `gets': No such file or directory @ rb_sysopen - test (Errno::ENOENT)
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:23:in `gets'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:23:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(master) ✗ ruby CodeClanCafe.rb    
+Args: 
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> selt 0
+** 0 **
+
+> order water 
+** [:water] **
+
+> order pizza
+** [:water, :pizza] **
+
+> order steak pie
+** The item you have tried to order has not been created... try additem first **
+
+> order steak_pie
+** [:water, :pizza, :steak_pie] **
+
+> exit
+Adios!
+➜  cafe git:(master) ✗ saveplay
+[master 163ca66] autosave of play code
+ 9 files changed, 335 insertions(+), 329 deletions(-)
+ create mode 100644 cafe/Cafe.rb
+ create mode 100644 cafe/CafeConsole.rb
+ create mode 100644 cafe/CodeClanCafe.rb
+ rename cafe/{console.rb => ConsoleUI.rb} (100%)
+ create mode 100644 cafe/Item.rb
+ create mode 100644 cafe/Menu.rb
+ create mode 100644 cafe/Order.rb
+ create mode 100644 cafe/Table.rb
+ delete mode 100644 cafe/orders.rb
+ssh: Could not resolve hostname github.com: nodename nor servname provided, or not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+➜  coding git:(master) git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+➜  coding git:(master) git checkout -b restructure
+M	cafe/CodeClanCafe.rb
+Switched to a new branch 'restructure'
+➜  coding git:(restructure) ✗ cd cafe
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 1 2
+** Sorry but table 1 has not been setup...
+Try adding the table to the cafe first **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> selt 0
+** 0 **
+
+> items
+** [] **
+
+> addi bread 1.00
+** [#<Item:0x007faa6d035c68 @name="bread", @price=1.0>] **
+
+> items
+** [#<Item:0x007faa6d035c68 @name="bread", @price=1.0>] **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> addi bread 1.00
+******
+bread £1.0
+******
+
+> items
+******
+bread £1.0
+******
+
+> sett 3
+** 3 tables have been set up. **
+
+> seat 2
+** Table 2 has been seated with 0 people **
+
+> seat 2 2
+** Table 2 has been seated with 2 people **
+
+> selt 2
+** 2 **
+
+> order bread
+******
+bread £1.0
+******
+
+> vo
+** 
+* bread 
+ **
+
+> pay
+/Users/user/Documents/coding/cafe/CafeConsole.rb:65:in `in': undefined method `[]' for 1.0:Float (NoMethodError)
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ git add .
+➜  cafe git:(restructure) ✗ gst
+On branch restructure
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   Cafe.rb
+	modified:   CafeConsole.rb
+	modified:   CodeClanCafe.rb
+	modified:   Item.rb
+	modified:   Menu.rb
+	modified:   Table.rb
+
+➜  cafe git:(restructure) ✗ git commit -m "The start of something beautiful"
+[restructure 7453e9c] The start of something beautiful
+ 6 files changed, 110 insertions(+), 57 deletions(-)
+ rewrite cafe/Item.rb (86%)
+➜  cafe git:(restructure) 
+➜  cafe git:(restructure) git push
+fatal: The current branch restructure has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin restructure
+
+➜  cafe git:(restructure) git push --set-upstream origin restructure
+Counting objects: 19, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (19/19), 4.95 KiB | 0 bytes/s, done.
+Total 19 (delta 5), reused 0 (delta 0)
+To git@github.com:harryaswan/CodingMuckAbout.git
+ * [new branch]      restructure -> restructure
+Branch restructure set up to track remote branch restructure from origin.
+➜  cafe git:(restructure) ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+/Users/user/Documents/coding/cafe/Menu.rb:7:in `add_item': wrong number of arguments (given 2, expected 1) (ArgumentError)
+	from /Users/user/Documents/coding/cafe/Cafe.rb:125:in `create_items'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:7:in `initialize'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:5:in `new'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:5:in `initialize'
+	from CodeClanCafe.rb:15:in `new'
+	from CodeClanCafe.rb:15:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> items
+******
+Pizza £4.99
+Cola £1.99
+Water £0.00
+******
+
+> vo
+/Users/user/Documents/coding/cafe/Cafe.rb:76:in `[]': no implicit conversion from nil to integer (TypeError)
+	from /Users/user/Documents/coding/cafe/Cafe.rb:76:in `view_order'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:41:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> vo
+** You must select a table first... **
+
+> items
+******
+Pizza £4.99
+Cola £1.99
+Water £0.00
+******
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> selt 0
+** 0 **
+
+> order pizza
+******
+Pizza £4.99
+******
+
+> order COLA
+******
+Pizza £4.99
+Cola £1.99
+******
+
+> vo
+** 
+* Pizza 
+* Cola 
+ **
+
+> pay
+/Users/user/Documents/coding/cafe/Table.rb:39:in `+': String can't be coerced into Fixnum (TypeError)
+	from /Users/user/Documents/coding/cafe/Table.rb:39:in `block in pay'
+	from /Users/user/Documents/coding/cafe/Table.rb:38:in `each'
+	from /Users/user/Documents/coding/cafe/Table.rb:38:in `pay'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:89:in `pay'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:49:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> selt 0
+** 0 **
+
+> order pizza
+******
+Pizza £4.99
+******
+
+> order cola
+******
+Pizza £4.99
+Cola £1.99
+******
+
+> vo
+** 
+* Pizza 
+* Cola 
+ **
+
+> pay  
+/Users/user/Documents/coding/cafe/CafeConsole.rb:65:in `in': undefined method `[]' for 6.98:Float (NoMethodError)
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0 2
+** Table 0 has been seated with 2 people **
+
+> selt 0
+** 0 **
+
+> order pizza
+******
+Pizza £4.99
+******
+
+> order cola
+******
+Pizza £4.99
+Cola £1.99
+******
+
+> vo
+** 
+* Pizza 
+* Cola 
+ **
+
+> pay
+Please pay: £6.98
+
+> clear
+Please pay: £6.98
+
+> pay
+Please pay: £6.98
+
+> cash
+Please pay: £6.98
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 1 people **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0 
+** Table 0 has been seated with 1 customer(s) **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+/Users/user/Documents/coding/cafe/Item.rb:5:in `initialize': undefined local variable or method `fale' for #<Item:0x007ffdeb9094a8> (NameError)
+Did you mean?  fail
+	from /Users/user/Documents/coding/cafe/Cafe.rb:130:in `new'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:130:in `create_items'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:7:in `initialize'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:5:in `new'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:5:in `initialize'
+	from CodeClanCafe.rb:15:in `new'
+	from CodeClanCafe.rb:15:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> menu
+/Users/user/Documents/coding/cafe/Cafe.rb:117:in `to_h': wrong element type Item at 0 (expected array) (TypeError)
+	from /Users/user/Documents/coding/cafe/Cafe.rb:117:in `view_menu'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:43:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> menu
+/Users/user/Documents/coding/cafe/Cafe.rb:117:in `to_h': wrong element type Item at 0 (expected array) (TypeError)
+	from /Users/user/Documents/coding/cafe/Cafe.rb:117:in `view_menu'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:43:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> menu
+******
+Pizza £4.99Cola £1.99Water £0.0******
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> menu
+******
+Pizza £4.99
+Cola £1.99
+Water £0.0
+******
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> menu
+******
+Pizza £4.99
+Cola £1.99
+Water £0.0(G)(V)
+******
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> menu
+******
+Pizza £4.99
+Cola £1.99
+Water £0.0 (G) (V)
+******
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ git add .
+➜  cafe git:(restructure) ✗ gst
+On branch restructure
+Your branch is up-to-date with 'origin/restructure'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   Cafe.rb
+	modified:   CafeConsole.rb
+	modified:   Item.rb
+
+➜  cafe git:(restructure) ✗ git commit -m "IT WORKS! I think..."
+[restructure 419b1d9] IT WORKS! I think...
+ 3 files changed, 40 insertions(+), 21 deletions(-)
+➜  cafe git:(restructure) git push
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.19 KiB | 0 bytes/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+To git@github.com:harryaswan/CodingMuckAbout.git
+   7453e9c..419b1d9  restructure -> restructure
+➜  cafe git:(restructure) ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order pizza
+******
+Pizza £4.99
+******
+
+> order cola
+******
+Pizza £4.99
+Cola £1.99
+******
+
+> order cola
+******
+Pizza £4.99
+Cola £1.99
+Cola £1.99
+******
+
+> unorder cola
+/Users/user/Documents/coding/cafe/CafeConsole.rb:67:in `in': undefined method `[]' for #<Item:0x007fca32909558> (NoMethodError)
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> order pizza
+** You must select a table first... **
+
+> selt 0
+** 0 **
+
+> order pizza
+******
+Pizza £4.99
+******
+
+> order cola
+******
+Pizza £4.99
+Cola £1.99
+******
+
+> order cola
+******
+Pizza £4.99
+Cola £1.99
+Cola £1.99
+******
+
+> unorder cola
+/Users/user/Documents/coding/cafe/CafeConsole.rb:67:in `in': undefined method `[]' for #<Item:0x007fb36a8195a0> (NoMethodError)
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order pizza
+** [#<Item:0x007fe4f102a318 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order cola
+** [#<Item:0x007fe4f102a318 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fe4f102a2a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> order cola
+** [#<Item:0x007fe4f102a318 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fe4f102a2a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fe4f102a2a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> unorder cola
+** #<Item:0x007fe4f102a2a0> **
+
+> vo
+** 
+* Pizza 
+* Cola 
+ **
+
+> order pizza
+** [#<Item:0x007fe4f102a318 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fe4f102a2a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fe4f102a318 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> unorder test
+** Sorry, can't seem to find that item **
+
+> vo
+** 
+* Pizza 
+* Cola 
+* Pizza 
+ **
+
+> unorder pizza 
+** #<Item:0x007fe4f102a318> **
+
+> vo
+** 
+* Cola 
+* Pizza 
+ **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 2
+** 2 tables have been set up. **
+
+> seat 1
+** Table 1 has been seated with 1 customer(s) **
+
+> selt 1
+** 1 **
+
+> order pizza
+** [#<Item:0x007ff4930163c0 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order cola
+** [#<Item:0x007ff4930163c0 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007ff493016348 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> order pizza
+** [#<Item:0x007ff4930163c0 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007ff493016348 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007ff4930163c0 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza 
+* Cola 
+* Pizza 
+ **
+
+> unorder pizza
+** #<Item:0x007ff4930163c0> **
+
+> vo
+** 
+* Cola 
+* Pizza 
+ **
+
+> ecit
+'ecit' is not a recognised command...
+
+Cafe CodeClan
+---------------
+settables | sett [x]      : sets up [x] number of tables in the cafe
+addtable | add            : adds a new table and will return the table number
+seattable | seat [x] [y]  : seats [y] number of people at table [x]
+selecttable | selt [x]    : selects the table [x] so that it can be modified
+viewselectedtable | vst   : returns the table number that is currently selected
+unselecttable | ust       : unselects the current table, you will have to select a new table
+order [x]                 : adds item [x] to the selected table's order
+unorder [x]               : revoves item [x] from the selected table's order
+vieworder | vo            : returns the selected tables order
+items                     : returns a list of the items avaliable for order
+additem | addi [x] [p]    : adds a new item [x] and it's price [p] to the list of items avaliable for order
+removeitem | remi [x]     : removes item [x] from the list of items avaliable to order
+pay [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party
+cleartable | clear        : clear the table and add the money from the bill to the Cafe cash
+cash                      : returns the total cash brought in through all the tables that have been cleared
+help                      : prints out this menu
+exit | close : will close the programme and the cafe
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 0
+** 0 tables have been set up. **
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 1
+** Please ensure you enter a table number **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ cd ..  
+➜  coding git:(restructure) ✗ ruby mapping.rb
+This program was created by Harry A. Swan
+createmap     :used to create the map
+setarea       :used to set an area of the map to a terrain
+drawmap       :used to draw the map to the console
+terrains      :used to print the terrains and their codes to the console
+help          :used to print this menu to the console
+exit          :used to close the program
+
+Please note: any input that is expecting an Integer will be converted to 0 if a string is given
+Input:
+createmap
+Please set the width of the map:
+20
+Please set the height of the map:
+20
+Map created with a size of 20 by 20
+Goodbye....
+➜  coding git:(restructure) ✗ ruby mapping.rb
+This program was created by Harry A. Swan
+createmap     :used to create the map
+setarea       :used to set an area of the map to a terrain
+drawmap       :used to draw the map to the console
+terrains      :used to print the terrains and their codes to the console
+help          :used to print this menu to the console
+exit          :used to close the program
+
+Please note: any input that is expecting an Integer will be converted to 0 if a string is given
+Input:
+createmap
+Please set the width of the map:
+20
+Please set the height of the map:
+20
+Map created with a size of 20 by 20
+Input:
+setarea
+Please set the x position of the area:
+0
+Please set the y position of the area:
+0
+Please set the width of the area:
+5
+Please set the height of the area:
+5
+Please set the terrain value for the area:
+3
+Map area with a size of 5 by 5 at point (0,0)
+Input:
+terrains
+Terrain values are as follows:
+| Code  | Name  | Symbol    |
+| 0    | Grass   | G    |
+| 1    | Rock   | R    |
+| 2    | Water   | W    |
+| 3    | Trees   | T    |
+| 4    | Sand   | S    |
+Input:
+drawmap
+Your map currently looks like:
+--------------------
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+TTTTTGGGGGGGGGGGGGGG
+TTTTTGGGGGGGGGGGGGGG
+TTTTTGGGGGGGGGGGGGGG
+TTTTTGGGGGGGGGGGGGGG
+TTTTTGGGGGGGGGGGGGGG
+--------------------
+Input:
+setarea
+Please set the x position of the area:
+10 
+Please set the y position of the area:
+10
+Please set the width of the area:
+1
+Please set the height of the area:
+1
+Please set the terrain value for the area:
+3
+Map area with a size of 1 by 1 at point (10,10)
+Input:
+drawmap
+Your map currently looks like:
+--------------------
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGTGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGG
+TTTTTGGGGGGGGGGGGGGG
+TTTTTGGGGGGGGGGGGGGG
+TTTTTGGGGGGGGGGGGGGG
+TTTTTGGGGGGGGGGGGGGG
+TTTTTGGGGGGGGGGGGGGG
+--------------------
+Input:
+exit
+Goodbye....
+➜  coding git:(restructure) ✗ ruby mapping.rb
+This program was created by Harry A. Swan
+createmap     :used to create the map
+setarea       :used to set an area of the map to a terrain
+drawmap       :used to draw the map to the console
+terrains      :used to print the terrains and their codes to the console
+help          :used to print this menu to the console
+exit          :used to close the program
+
+Please note: any input that is expecting an Integer will be converted to 0 if a string is given
+Input:
+asdf
+Not a recognised command....
+createmap     :used to create the map
+setarea       :used to set an area of the map to a terrain
+drawmap       :used to draw the map to the console
+terrains      :used to print the terrains and their codes to the console
+help          :used to print this menu to the console
+exit          :used to close the program
+
+Please note: any input that is expecting an Integer will be converted to 0 if a string is given
+Input:
+asdf
+Not a recognised command....
+createmap     :used to create the map
+setarea       :used to set an area of the map to a terrain
+drawmap       :used to draw the map to the console
+terrains      :used to print the terrains and their codes to the console
+help          :used to print this menu to the console
+exit          :used to close the program
+
+Please note: any input that is expecting an Integer will be converted to 0 if a string is given
+Input:
+asdf
+Not a recognised command....
+createmap     :used to create the map
+setarea       :used to set an area of the map to a terrain
+drawmap       :used to draw the map to the console
+terrains      :used to print the terrains and their codes to the console
+help          :used to print this menu to the console
+exit          :used to close the program
+
+Please note: any input that is expecting an Integer will be converted to 0 if a string is given
+Input:
+asdf
+Not a recognised command....
+createmap     :used to create the map
+setarea       :used to set an area of the map to a terrain
+drawmap       :used to draw the map to the console
+terrains      :used to print the terrains and their codes to the console
+help          :used to print this menu to the console
+exit          :used to close the program
+
+Please note: any input that is expecting an Integer will be converted to 0 if a string is given
+Input:
+sadf
+Not a recognised command....
+createmap     :used to create the map
+setarea       :used to set an area of the map to a terrain
+drawmap       :used to draw the map to the console
+terrains      :used to print the terrains and their codes to the console
+help          :used to print this menu to the console
+exit          :used to close the program
+
+Please note: any input that is expecting an Integer will be converted to 0 if a string is given
+Input:
+exit
+Goodbye....
+➜  coding git:(restructure) ✗ cd cafe 
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb 
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order
+/Users/user/Documents/coding/cafe/Menu.rb:35:in `block in has': undefined method `downcase' for nil:NilClass (NoMethodError)
+	from /Users/user/Documents/coding/cafe/Menu.rb:34:in `each'
+	from /Users/user/Documents/coding/cafe/Menu.rb:34:in `has'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:51:in `order'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:37:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order pizza
+** [#<Item:0x007fed0890a400 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> menu  
+** [#<Item:0x007fed0890a400 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fed0890a388 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fed0890a310 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>] **
+
+> order cola
+** [#<Item:0x007fed0890a400 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fed0890a388 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> order pizza
+** [#<Item:0x007fed0890a400 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fed0890a388 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fed0890a400 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza 
+* Cola 
+* Pizza 
+ **
+
+> unorder pizza
+** #<Item:0x007fed0890a400> **
+
+> vo
+** 
+* Cola 
+* Pizza 
+ **
+
+> exit            
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order pizza
+** [#<Item:0x007fa56101a398 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order cola
+** [#<Item:0x007fa56101a398 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fa56101a320 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> order pizza
+** [#<Item:0x007fa56101a398 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fa56101a320 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fa56101a398 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza 
+* Cola 
+* Pizza 
+ **
+
+> unorder pizza
+** #<Item:0x007fa56101a398> **
+
+> vo
+** 
+* Cola 
+* Pizza 
+ **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order pizza
+** [#<Item:0x007fc15280a2f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order cola
+** [#<Item:0x007fc15280a2f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fc15280a258 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> order pizza
+** [#<Item:0x007fc15280a2f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fc15280a258 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fc15280a2f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza 
+* Cola 
+* Pizza 
+ **
+
+> unorder pizza
+/Users/user/Documents/coding/cafe/Order.rb:12:in `removeItem': undefined method `reverse' for #<Item:0x007fc15280a2f8> (NoMethodError)
+	from /Users/user/Documents/coding/cafe/Table.rb:22:in `unorder'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:65:in `unorder'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:39:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> selt 0
+** 0 **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> order pizza
+** [#<Item:0x007fd74c82e3a0 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order cola
+** [#<Item:0x007fd74c82e3a0 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fd74c82e300 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> order pizza
+** [#<Item:0x007fd74c82e3a0 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fd74c82e300 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fd74c82e3a0 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza 
+* Cola 
+* Pizza 
+ **
+
+> unorder pizza
+** #<Item:0x007fd74c82e3a0> **
+
+> vo
+** 
+* Cola 
+* Pizza 
+ **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> selt 0
+** 0 **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> order
+/Users/user/Documents/coding/cafe/Menu.rb:35:in `block in has': undefined method `downcase' for nil:NilClass (NoMethodError)
+	from /Users/user/Documents/coding/cafe/Menu.rb:34:in `each'
+	from /Users/user/Documents/coding/cafe/Menu.rb:34:in `has'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:51:in `order'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:37:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> order
+** You must select a table first... **
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order
+/Users/user/Documents/coding/cafe/Menu.rb:35:in `block in has': undefined method `downcase' for nil:NilClass (NoMethodError)
+	from /Users/user/Documents/coding/cafe/Menu.rb:34:in `each'
+	from /Users/user/Documents/coding/cafe/Menu.rb:34:in `has'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:51:in `order'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:37:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order
+/Users/user/Documents/coding/cafe/Menu.rb:36:in `block in has': undefined method `downcase' for nil:NilClass (NoMethodError)
+	from /Users/user/Documents/coding/cafe/Menu.rb:35:in `each'
+	from /Users/user/Documents/coding/cafe/Menu.rb:35:in `has'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:51:in `order'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:37:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order
+/Users/user/Documents/coding/cafe/Menu.rb:36:in `block in has': undefined method `downcase' for nil:NilClass (NoMethodError)
+	from /Users/user/Documents/coding/cafe/Menu.rb:35:in `each'
+	from /Users/user/Documents/coding/cafe/Menu.rb:35:in `has'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:51:in `order'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:37:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> order
+** You must select a table first... **
+
+> selt 0
+** Please ensure you enter a table number **
+
+> seat 0
+** Sorry but table 0 has not been setup...
+Try adding the table to the cafe first **
+
+> add
+** A new table has been added, it is Table 0 **
+
+> selt 0
+** 0 **
+
+> seat 0
+** Table 0 has been seated with 1 customer(s) **
+
+> order
+i: #<Item:0x007ff49190a050>
+/Users/user/Documents/coding/cafe/Menu.rb:37:in `block in has': undefined method `downcase' for nil:NilClass (NoMethodError)
+	from /Users/user/Documents/coding/cafe/Menu.rb:35:in `each'
+	from /Users/user/Documents/coding/cafe/Menu.rb:35:in `has'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:51:in `order'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:37:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> add
+** A new table has been added, it is Table 0 **
+
+> selt 0
+** 0 **
+
+> seat
+** Table 0 has been seated with 1 customer(s) **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> add
+** A new table has been added, it is Table 0 **
+
+> seat
+** Table 0 has been seated with 1 customer(s) **
+
+> add
+** A new table has been added, it is Table 1 **
+
+> selt 1
+** 1 **
+
+> seat
+** Table 0 has been seated with 1 customer(s) **
+
+> seat 1
+** Table 1 has been seated with 1 customer(s) **
+
+> vst
+** Table 1 is currently selected **
+
+> order
+i: #<Item:0x007fbf90909bb8>
+/Users/user/Documents/coding/cafe/Menu.rb:37:in `block in has': undefined method `downcase' for nil:NilClass (NoMethodError)
+	from /Users/user/Documents/coding/cafe/Menu.rb:35:in `each'
+	from /Users/user/Documents/coding/cafe/Menu.rb:35:in `has'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:56:in `order'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:37:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> add
+** A new table has been added, it is Table 0 **
+
+> seat 
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order pizza
+i: #<Item:0x007fb51c819bc8>
+** [#<Item:0x007fb51c819bc8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order cola
+i: #<Item:0x007fb51c819bc8>
+i: #<Item:0x007fb51c819b50>
+** [#<Item:0x007fb51c819bc8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fb51c819b50 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> order pizza
+i: #<Item:0x007fb51c819bc8>
+** [#<Item:0x007fb51c819bc8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fb51c819b50 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fb51c819bc8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order cola
+i: #<Item:0x007fb51c819bc8>
+i: #<Item:0x007fb51c819b50>
+** [#<Item:0x007fb51c819bc8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fb51c819b50 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fb51c819bc8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fb51c819b50 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza 
+* Cola 
+* Pizza 
+* Cola 
+ **
+
+> unorder cola
+i: #<Item:0x007fb51c819bc8>
+i: #<Item:0x007fb51c819b50>
+** #<Item:0x007fb51c819bc8> **
+
+> vo
+** 
+* Cola 
+* Pizza 
+* Cola 
+ **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> add
+** A new table has been added, it is Table 0 **
+
+> seat
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order pizza
+i: #<Item:0x007fee11109918>
+on: Pizza nn: pizza
+** [#<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> unorder pizza
+i: #<Item:0x007fee11109918>
+on: Pizza nn: pizza
+** #<Item:0x007fee11109918> **
+
+> vo
+** 
+ **
+
+> order pizza
+i: #<Item:0x007fee11109918>
+on: Pizza nn: pizza
+** [#<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza 
+ **
+
+> order pizza
+i: #<Item:0x007fee11109918>
+on: Pizza nn: pizza
+** [#<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza 
+* Pizza 
+ **
+
+> unorder pizza
+i: #<Item:0x007fee11109918>
+on: Pizza nn: pizza
+** #<Item:0x007fee11109918> **
+
+> vo
+** 
+* Pizza 
+ **
+
+> order cola
+i: #<Item:0x007fee11109918>
+on: Pizza nn: cola
+i: #<Item:0x007fee111098a0>
+on: Cola nn: cola
+** [#<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza 
+* Cola 
+ **
+
+> order pizza
+i: #<Item:0x007fee11109918>
+on: Pizza nn: pizza
+** [#<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza 
+* Cola 
+* Pizza 
+ **
+
+> unorder cola
+i: #<Item:0x007fee11109918>
+on: Pizza nn: cola
+i: #<Item:0x007fee111098a0>
+on: Cola nn: cola
+** #<Item:0x007fee111098a0> **
+
+> vo
+** 
+* Pizza 
+* Pizza 
+ **
+
+> order cola
+i: #<Item:0x007fee11109918>
+on: Pizza nn: cola
+i: #<Item:0x007fee111098a0>
+on: Cola nn: cola
+** [#<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> order cola
+i: #<Item:0x007fee11109918>
+on: Pizza nn: cola
+i: #<Item:0x007fee111098a0>
+on: Cola nn: cola
+** [#<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza 
+* Pizza 
+* Cola 
+* Cola 
+ **
+
+> unorder cola
+i: #<Item:0x007fee11109918>
+on: Pizza nn: cola
+i: #<Item:0x007fee111098a0>
+on: Cola nn: cola
+** #<Item:0x007fee11109918> **
+
+> vo
+** 
+* Pizza 
+* Cola 
+* Cola 
+ **
+
+> vo
+** 
+* Pizza 
+* Cola 
+* Cola 
+ **
+
+> unorder pizza
+i: #<Item:0x007fee11109918>
+on: Pizza nn: pizza
+** #<Item:0x007fee111098a0> **
+
+> vo
+** 
+* Pizza 
+* Cola 
+ **
+
+> unorder cola
+i: #<Item:0x007fee11109918>
+on: Pizza nn: cola
+i: #<Item:0x007fee111098a0>
+on: Cola nn: cola
+** #<Item:0x007fee11109918> **
+
+> vo
+** 
+* Cola 
+ **
+
+> menu
+** [#<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109828 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>] **
+
+> vo
+** 
+* Cola 
+ **
+
+> order water
+i: #<Item:0x007fee11109918>
+on: Pizza nn: water
+i: #<Item:0x007fee111098a0>
+on: Cola nn: water
+i: #<Item:0x007fee11109828>
+on: Water nn: water
+** [#<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109828 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>] **
+
+> vo
+** 
+* Cola 
+* Water 
+ **
+
+> unorder water
+i: #<Item:0x007fee11109918>
+on: Pizza nn: water
+i: #<Item:0x007fee111098a0>
+on: Cola nn: water
+i: #<Item:0x007fee11109828>
+on: Water nn: water
+** #<Item:0x007fee111098a0> **
+
+> vo
+** 
+* Water 
+ **
+
+> order pizza
+i: #<Item:0x007fee11109918>
+on: Pizza nn: pizza
+** [#<Item:0x007fee11109828 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> ordercola
+'ordercola' is not a recognised command...
+
+Cafe CodeClan
+---------------
+settables | sett [x]      : sets up [x] number of tables in the cafe
+addtable | add            : adds a new table and will return the table number
+seattable | seat [x] [y]  : seats [y] number of people at table [x]
+selecttable | selt [x]    : selects the table [x] so that it can be modified
+viewselectedtable | vst   : returns the table number that is currently selected
+unselecttable | ust       : unselects the current table, you will have to select a new table
+order [x]                 : adds item [x] to the selected table's order
+unorder [x]               : revoves item [x] from the selected table's order
+vieworder | vo            : returns the selected tables order
+items                     : returns a list of the items avaliable for order
+additem | addi [x] [p]    : adds a new item [x] and it's price [p] to the list of items avaliable for order
+removeitem | remi [x]     : removes item [x] from the list of items avaliable to order
+pay [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party
+cleartable | clear        : clear the table and add the money from the bill to the Cafe cash
+cash                      : returns the total cash brought in through all the tables that have been cleared
+help                      : prints out this menu
+exit | close : will close the programme and the cafe
+
+> order cola
+i: #<Item:0x007fee11109918>
+on: Pizza nn: cola
+i: #<Item:0x007fee111098a0>
+on: Cola nn: cola
+** [#<Item:0x007fee11109828 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> order pizza
+i: #<Item:0x007fee11109918>
+on: Pizza nn: pizza
+** [#<Item:0x007fee11109828 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order water
+i: #<Item:0x007fee11109918>
+on: Pizza nn: water
+i: #<Item:0x007fee111098a0>
+on: Cola nn: water
+i: #<Item:0x007fee11109828>
+on: Water nn: water
+** [#<Item:0x007fee11109828 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109828 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>] **
+
+> order pizza
+i: #<Item:0x007fee11109918>
+on: Pizza nn: pizza
+** [#<Item:0x007fee11109828 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109828 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order cola
+i: #<Item:0x007fee11109918>
+on: Pizza nn: cola
+i: #<Item:0x007fee111098a0>
+on: Cola nn: cola
+** [#<Item:0x007fee11109828 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee11109828 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fee11109918 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fee111098a0 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Water 
+* Pizza 
+* Cola 
+* Pizza 
+* Water 
+* Pizza 
+* Cola 
+ **
+
+> unorder water
+i: #<Item:0x007fee11109918>
+on: Pizza nn: water
+i: #<Item:0x007fee111098a0>
+on: Cola nn: water
+i: #<Item:0x007fee11109828>
+on: Water nn: water
+** #<Item:0x007fee111098a0> **
+
+> vo
+** 
+* Water 
+* Pizza 
+* Pizza 
+* Water 
+* Pizza 
+* Cola 
+ **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> menu
+** [#<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc44825930 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc448258b8 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>] **
+
+> add
+** A new table has been added, it is Table 0 **
+
+> seat
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order pizza
+i: #<Item:0x007fbc448259f8>
+on: Pizza nn: pizza
+** [#<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order pizza
+i: #<Item:0x007fbc448259f8>
+on: Pizza nn: pizza
+** [#<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order cola
+i: #<Item:0x007fbc448259f8>
+on: Pizza nn: cola
+i: #<Item:0x007fbc44825930>
+on: Cola nn: cola
+** [#<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc44825930 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> order cola
+i: #<Item:0x007fbc448259f8>
+on: Pizza nn: cola
+i: #<Item:0x007fbc44825930>
+on: Cola nn: cola
+** [#<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc44825930 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc44825930 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> order water
+i: #<Item:0x007fbc448259f8>
+on: Pizza nn: water
+i: #<Item:0x007fbc44825930>
+on: Cola nn: water
+i: #<Item:0x007fbc448258b8>
+on: Water nn: water
+** [#<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc44825930 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc44825930 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc448258b8 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>] **
+
+> order water
+i: #<Item:0x007fbc448259f8>
+on: Pizza nn: water
+i: #<Item:0x007fbc44825930>
+on: Cola nn: water
+i: #<Item:0x007fbc448258b8>
+on: Water nn: water
+** [#<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc44825930 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc44825930 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc448258b8 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fbc448258b8 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>] **
+
+> order piza
+i: #<Item:0x007fbc448259f8>
+on: Pizza nn: piza
+i: #<Item:0x007fbc44825930>
+on: Cola nn: piza
+i: #<Item:0x007fbc448258b8>
+on: Water nn: piza
+** The item you have tried to order does not exist yet **
+
+> order pizza
+i: #<Item:0x007fbc448259f8>
+on: Pizza nn: pizza
+** [#<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc44825930 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc44825930 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>, #<Item:0x007fbc448258b8 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fbc448258b8 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fbc448259f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza --- #<Item:0x007fbc448259f8> 
+* Pizza --- #<Item:0x007fbc448259f8> 
+* Cola --- #<Item:0x007fbc44825930> 
+* Cola --- #<Item:0x007fbc44825930> 
+* Water --- #<Item:0x007fbc448258b8> 
+* Water --- #<Item:0x007fbc448258b8> 
+* Pizza --- #<Item:0x007fbc448259f8> 
+ **
+
+> unorder pizza
+i: #<Item:0x007fbc448259f8>
+on: Pizza nn: pizza
+** #<Item:0x007fbc448259f8> **
+
+> vo
+** 
+* Pizza --- #<Item:0x007fbc448259f8> 
+* Cola --- #<Item:0x007fbc44825930> 
+* Cola --- #<Item:0x007fbc44825930> 
+* Water --- #<Item:0x007fbc448258b8> 
+* Water --- #<Item:0x007fbc448258b8> 
+* Pizza --- #<Item:0x007fbc448259f8> 
+ **
+
+> unorder pizza
+i: #<Item:0x007fbc448259f8>
+on: Pizza nn: pizza
+** #<Item:0x007fbc448259f8> **
+
+> vo  
+** 
+* Cola --- #<Item:0x007fbc44825930> 
+* Cola --- #<Item:0x007fbc44825930> 
+* Water --- #<Item:0x007fbc448258b8> 
+* Water --- #<Item:0x007fbc448258b8> 
+* Pizza --- #<Item:0x007fbc448259f8> 
+ **
+
+> unorder water 
+i: #<Item:0x007fbc448259f8>
+on: Pizza nn: water
+i: #<Item:0x007fbc44825930>
+on: Cola nn: water
+i: #<Item:0x007fbc448258b8>
+on: Water nn: water
+** #<Item:0x007fbc44825930> **
+
+> vo
+** 
+* Cola --- #<Item:0x007fbc44825930> 
+* Water --- #<Item:0x007fbc448258b8> 
+* Water --- #<Item:0x007fbc448258b8> 
+* Pizza --- #<Item:0x007fbc448259f8> 
+ **
+
+> unorder steak
+i: #<Item:0x007fbc448259f8>
+on: Pizza nn: steak
+i: #<Item:0x007fbc44825930>
+on: Cola nn: steak
+i: #<Item:0x007fbc448258b8>
+on: Water nn: steak
+** Sorry, can't seem to find that item **
+
+> vo
+** 
+* Cola --- #<Item:0x007fbc44825930> 
+* Water --- #<Item:0x007fbc448258b8> 
+* Water --- #<Item:0x007fbc448258b8> 
+* Pizza --- #<Item:0x007fbc448259f8> 
+ **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ saveplay
+[restructure 9e7e542] autosave of play code
+ 7 files changed, 33 insertions(+), 58 deletions(-)
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.18 KiB | 0 bytes/s, done.
+Total 10 (delta 7), reused 0 (delta 0)
+To git@github.com:harryaswan/CodingMuckAbout.git
+   419b1d9..9e7e542  restructure -> restructure
+➜  coding git:(restructure) cd cafe 
+➜  cafe git:(restructure) ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> add
+** A new table has been added, it is Table 0 **
+
+> seat
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order pizza
+i: #<Item:0x007fed2c8119f8>
+** [#<Item:0x007fed2c8119f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order pizza
+i: #<Item:0x007fed2c8119f8>
+** [#<Item:0x007fed2c8119f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fed2c8119f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order water
+i: #<Item:0x007fed2c8118e0>
+** [#<Item:0x007fed2c8119f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fed2c8119f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fed2c8118e0 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>] **
+
+> order water
+i: #<Item:0x007fed2c8118e0>
+** [#<Item:0x007fed2c8119f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fed2c8119f8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fed2c8118e0 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fed2c8118e0 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>] **
+
+> vo
+** 
+* Pizza --- #<Item:0x007fed2c8119f8> 
+* Pizza --- #<Item:0x007fed2c8119f8> 
+* Water --- #<Item:0x007fed2c8118e0> 
+* Water --- #<Item:0x007fed2c8118e0> 
+ **
+
+> unorder water
+i: #<Item:0x007fed2c8118e0>
+a: #<Item:0x007fed2c8118e0>
+** #<Item:0x007fed2c8118e0> **
+
+> vo
+** 
+* Pizza --- #<Item:0x007fed2c8119f8> 
+* Pizza --- #<Item:0x007fed2c8119f8> 
+* Water --- #<Item:0x007fed2c8118e0> 
+ **
+
+> unorder pizza
+i: #<Item:0x007fed2c8119f8>
+a: #<Item:0x007fed2c8119f8>
+** #<Item:0x007fed2c8119f8> **
+
+> vo
+** 
+* Pizza --- #<Item:0x007fed2c8119f8> 
+* Water --- #<Item:0x007fed2c8118e0> 
+ **
+
+> unorder water
+i: #<Item:0x007fed2c8118e0>
+a: #<Item:0x007fed2c8118e0>
+** #<Item:0x007fed2c8118e0> **
+
+> vo
+** 
+* Pizza --- #<Item:0x007fed2c8119f8> 
+ **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb test 
+Args: test
+
+Welcome to Cafe CodeClan...
+
+> /Users/user/Documents/coding/cafe/ConsoleUI.rb:23:in `gets': No such file or directory @ rb_sysopen - test (Errno::ENOENT)
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:23:in `gets'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:23:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb test
+
+Welcome to Cafe CodeClan...
+
+> /Users/user/Documents/coding/cafe/ConsoleUI.rb:23:in `gets': No such file or directory @ rb_sysopen - test (Errno::ENOENT)
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:23:in `gets'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:23:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb    
+
+Welcome to Cafe CodeClan...
+
+> order
+** You must select a table first... **
+
+> add   
+** A new table has been added, it is Table 0 **
+
+> seat 
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order 
+/Users/user/Documents/coding/cafe/Menu.rb:35:in `block in has': undefined method `downcase' for nil:NilClass (NoMethodError)
+	from /Users/user/Documents/coding/cafe/Menu.rb:34:in `each'
+	from /Users/user/Documents/coding/cafe/Menu.rb:34:in `has'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:56:in `order'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:37:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:16:in `<main>'
+➜  cafe git:(restructure) ✗ pry
+[1] pry(main)> CodeClanCafe.rb
+NameError: uninitialized constant CodeClanCafe
+from (pry):1:in `__pry__'
+[2] pry(main)> CodeClanCafe
+NameError: uninitialized constant CodeClanCafe
+from (pry):2:in `__pry__'
+[3] pry(main)> cd CodeClanCafe
+Error: Bad object path: "CodeClanCafe"
+Failed trying to resolve: "CodeClanCafe"
+Exception: #<NameError: uninitialized constant CodeClanCafe>
+[4] pry(main)> cd CodeClanCafe.rb
+Error: Bad object path: "CodeClanCafe.rb"
+Failed trying to resolve: "CodeClanCafe.rb"
+Exception: #<NameError: uninitialized constant CodeClanCafe>
+[5] pry(main)> exit
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ gem install pry-byebug pry-doc
+Fetching: byebug-8.2.5.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed byebug-8.2.5
+Fetching: pry-byebug-3.3.0.gem (100%)
+Successfully installed pry-byebug-3.3.0
+Fetching: yard-0.8.7.6.gem (100%)
+Successfully installed yard-0.8.7.6
+Fetching: pry-doc-0.8.0.gem (100%)
+Successfully installed pry-doc-0.8.0
+4 gems installed
+➜  cafe git:(restructure) ✗ pry
+[1] pry(main)> hello
+NameError: undefined local variable or method `hello' for main:Object
+from (pry):1:in `__pry__'
+[2] pry(main)> hello = "test"
+=> "test"
+[3] pry(main)> hello.length
+=> 4
+[4] pry(main)> exit
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> add
+** A new table has been added, it is Table 0 **
+
+> seat
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order pizza
+i: #<Item:0x007fabc49c54d8>
+** [#<Item:0x007fabc49c54d8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order pizza
+i: #<Item:0x007fabc49c54d8>
+** [#<Item:0x007fabc49c54d8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fabc49c54d8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>] **
+
+> order water
+i: #<Item:0x007fabc49c53e8>
+** [#<Item:0x007fabc49c54d8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fabc49c54d8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fabc49c53e8 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>] **
+
+> unorder water
+
+From: /Users/user/Documents/coding/cafe/Cafe.rb @ line 70 Cafe#unorder:
+
+    67: def unorder(item_as_string)
+    68:     if @selected_table
+    69:         binding.pry
+ => 70:         if tmp_item = @menu.has(item_as_string)
+    71:             @tables[@selected_table].unorder(tmp_item)
+    72:         else
+    73:             return "Sorry, can't seem to find that item"
+    74:         end
+    75:     else
+    76:         return "You must select a table first..."
+    77:     end
+    78: end
+
+[1] pry(#<Cafe>)> tmp_item
+=> nil
+[2] pry(#<Cafe>)> item_as_string
+=> "water"
+[3] pry(#<Cafe>)> step
+
+From: /Users/user/Documents/coding/cafe/Menu.rb @ line 34 Menu#has:
+
+    33: def has(item_as_string)
+ => 34:     for item in @items.reverse
+    35:         if item.name.downcase == item_as_string.downcase
+    36:             puts "i: #{item}"
+    37:             return item
+    38:         end
+    39:     end
+    40:     return false
+    41: end
+
+[3] pry(#<Menu>)> item
+=> nil
+[4] pry(#<Menu>)> step
+
+From: /Users/user/Documents/coding/cafe/Menu.rb @ line 35 Menu#has:
+
+    33: def has(item_as_string)
+    34:     for item in @items.reverse
+ => 35:         if item.name.downcase == item_as_string.downcase
+    36:             puts "i: #{item}"
+    37:             return item
+    38:         end
+    39:     end
+    40:     return false
+    41: end
+
+[4] pry(#<Menu>)> item
+=> #<Item:0x007fabc49c53e8
+ @gluten_free=true,
+ @name="Water",
+ @price=0.0,
+ @vegie=true>
+[5] pry(#<Menu>)> continue
+i: #<Item:0x007fabc49c53e8>
+a: #<Item:0x007fabc49c53e8>
+** #<Item:0x007fabc49c53e8> **
+
+> vo
+** 
+* Pizza --- #<Item:0x007fabc49c54d8> 
+* Pizza --- #<Item:0x007fabc49c54d8> 
+ **
+
+> order water
+i: #<Item:0x007fabc49c53e8>
+** [#<Item:0x007fabc49c54d8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fabc49c54d8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fabc49c53e8 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>] **
+
+> order cola
+i: #<Item:0x007fabc49c5460>
+** [#<Item:0x007fabc49c54d8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fabc49c54d8 @name="Pizza", @price=4.99, @gluten_free=false, @vegie=false>, #<Item:0x007fabc49c53e8 @name="Water", @price=0.0, @gluten_free=true, @vegie=true>, #<Item:0x007fabc49c5460 @name="Cola", @price=1.99, @gluten_free=false, @vegie=false>] **
+
+> vo
+** 
+* Pizza --- #<Item:0x007fabc49c54d8> 
+* Pizza --- #<Item:0x007fabc49c54d8> 
+* Water --- #<Item:0x007fabc49c53e8> 
+* Cola --- #<Item:0x007fabc49c5460> 
+ **
+
+> close
+Adios!
+➜  cafe git:(restructure) ✗ atom .
+➜  cafe git:(restructure) ✗ saveplay 
+[restructure f7b7020] autosave of play code
+ 3 files changed, 7 insertions(+), 2 deletions(-)
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 657 bytes | 0 bytes/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+To git@github.com:harryaswan/CodingMuckAbout.git
+   9e7e542..f7b7020  restructure -> restructure
+➜  coding git:(restructure) git diff --name-status master..restructure
+
+➜  coding git:(restructure) git diff master..restructure
+➜  coding git:(restructure) cd cafe            
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+CodeClanCafe.rb: /Users/user/Documents/coding/cafe/Cafe.rb:147: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '(' (SyntaxError)
+        fid = fopen( ['cafe_items.txt'],'w') %opens files for writing
+                                                         ^
+/Users/user/Documents/coding/cafe/Cafe.rb:147: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+/Users/user/Documents/coding/cafe/Cafe.rb:148: unknown type of %string
+        fprintf(fid,'%1.2f %1.2f',GetSecs,rand); %saves some date
+                                                    ^
+/Users/user/Documents/coding/cafe/Cafe.rb:148: syntax error, unexpected end-of-input, expecting keyword_end
+        fprintf(fid,'%1.2f %1.2f',GetSecs,rand); %saves some date
+                                                    ^
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+CodeClanCafe.rb: /Users/user/Documents/coding/cafe/Cafe.rb:149: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '(' (SyntaxError)
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> saveitems
+/Users/user/Documents/coding/cafe/Cafe.rb:147:in `save_items': undefined method `fopen' for #<Cafe:0x007f91815f8d30> (NoMethodError)
+Did you mean?  open
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:49:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:17:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> saveitems
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> saveitems
+/Users/user/Documents/coding/cafe/Cafe.rb:148:in `initialize': No such file or directory @ rb_sysopen - items/cafe_items.txt (Errno::ENOENT)
+	from /Users/user/Documents/coding/cafe/Cafe.rb:148:in `open'
+	from /Users/user/Documents/coding/cafe/Cafe.rb:148:in `save_items'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:49:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:17:in `<main>'
+➜  cafe git:(restructure) ✗ mkdir items
+➜  cafe git:(restructure) ✗ mkdir items
+mkdir: items: File exists
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> saveitems
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> saveitems
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> saveitems
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> saveitems
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> items
+'items' is not a recognised command...
+
+Cafe CodeClan
+---------------
+settables | sett [x]      : sets up [x] number of tables in the cafe
+addtable | add            : adds a new table and will return the table number
+seattable | seat [x] [y]  : seats [y] number of people at table [x]
+selecttable | selt [x]    : selects the table [x] so that it can be modified
+viewselectedtable | vst   : returns the table number that is currently selected
+unselecttable | ust       : unselects the current table, you will have to select a new table
+order [x]                 : adds item [x] to the selected table's order
+unorder [x]               : revoves item [x] from the selected table's order
+vieworder | vo            : returns the selected tables order
+items                     : returns a list of the items avaliable for order
+additem | addi [x] [p]    : adds a new item [x] and it's price [p] to the list of items avaliable for order
+removeitem | remi [x]     : removes item [x] from the list of items avaliable to order
+pay [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party
+cleartable | clear        : clear the table and add the money from the bill to the Cafe cash
+cash                      : returns the total cash brought in through all the tables that have been cleared
+help                      : prints out this menu
+exit | close : will close the programme and the cafe
+
+> menu
+** [#<Item:0x007fc772438b90 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc772438a78 @name="Cola", @price=1.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc772438960 @name="Water", @price=0.0, @gluten_free="true", @vegie="true\n">] **
+
+> addi Milk 0.35
+** [#<Item:0x007fc772438b90 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc772438a78 @name="Cola", @price=1.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc772438960 @name="Water", @price=0.0, @gluten_free="true", @vegie="true\n">, #<Item:0x007fc7721b26a0 @name="Milk", @price=0.35, @gluten_free=false, @vegie=false>] **
+
+> menu
+** [#<Item:0x007fc772438b90 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc772438a78 @name="Cola", @price=1.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc772438960 @name="Water", @price=0.0, @gluten_free="true", @vegie="true\n">, #<Item:0x007fc7721b26a0 @name="Milk", @price=0.35, @gluten_free=false, @vegie=false>] **
+
+> addi Toast 0.5 true true
+** [#<Item:0x007fc772438b90 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc772438a78 @name="Cola", @price=1.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc772438960 @name="Water", @price=0.0, @gluten_free="true", @vegie="true\n">, #<Item:0x007fc7721b26a0 @name="Milk", @price=0.35, @gluten_free=false, @vegie=false>, #<Item:0x007fc77380ba28 @name="Toast", @price=0.5, @gluten_free=false, @vegie=false>] **
+
+> menu
+** [#<Item:0x007fc772438b90 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc772438a78 @name="Cola", @price=1.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc772438960 @name="Water", @price=0.0, @gluten_free="true", @vegie="true\n">, #<Item:0x007fc7721b26a0 @name="Milk", @price=0.35, @gluten_free=false, @vegie=false>, #<Item:0x007fc77380ba28 @name="Toast", @price=0.5, @gluten_free=false, @vegie=false>] **
+
+> saveitems
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> menu
+** [#<Item:0x007fc22434cbf8 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc22434cae0 @name="Cola", @price=1.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc22434c9c8 @name="Water", @price=0.0, @gluten_free="true", @vegie="true\n">, #<Item:0x007fc22434c8b0 @name="Milk", @price=0.35, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc22434c798 @name="Toast", @price=0.5, @gluten_free="false", @vegie="false\n">] **
+
+> sett 1
+** 1 tables have been set up. **
+
+> seat
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order toast
+i: #<Item:0x007fc22434c798>
+** [#<Item:0x007fc22434c798 @name="Toast", @price=0.5, @gluten_free="false", @vegie="false\n">] **
+
+> order milk
+i: #<Item:0x007fc22434c8b0>
+** [#<Item:0x007fc22434c798 @name="Toast", @price=0.5, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc22434c8b0 @name="Milk", @price=0.35, @gluten_free="false", @vegie="false\n">] **
+
+> vo
+** 
+* Toast --- #<Item:0x007fc22434c798> 
+* Milk --- #<Item:0x007fc22434c8b0> 
+ **
+
+> pay
+/Users/user/Documents/coding/cafe/Cafe.rb:97:in `pay': undefined method `items_avaliable' for #<Cafe:0x007fc22434cf18> (NoMethodError)
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:51:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:17:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> add
+** A new table has been added, it is Table 0 **
+
+> seat
+** Table 0 has been seated with 1 customer(s) **
+
+> setl 0
+'setl' is not a recognised command...
+
+Cafe CodeClan
+---------------
+settables | sett [x]      : sets up [x] number of tables in the cafe
+addtable | add            : adds a new table and will return the table number
+seattable | seat [x] [y]  : seats [y] number of people at table [x]
+selecttable | selt [x]    : selects the table [x] so that it can be modified
+viewselectedtable | vst   : returns the table number that is currently selected
+unselecttable | ust       : unselects the current table, you will have to select a new table
+order [x]                 : adds item [x] to the selected table's order
+unorder [x]               : revoves item [x] from the selected table's order
+vieworder | vo            : returns the selected tables order
+items                     : returns a list of the items avaliable for order
+additem | addi [x] [p]    : adds a new item [x] and it's price [p] to the list of items avaliable for order
+removeitem | remi [x]     : removes item [x] from the list of items avaliable to order
+pay [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party
+cleartable | clear        : clear the table and add the money from the bill to the Cafe cash
+cash                      : returns the total cash brought in through all the tables that have been cleared
+help                      : prints out this menu
+exit | close : will close the programme and the cafe
+
+> selt 0
+** 0 **
+
+> order milk
+i: #<Item:0x007f8de38c0758>
+** [#<Item:0x007f8de38c0758 @name="Milk", @price=0.35, @gluten_free="false", @vegie="false\n">] **
+
+> order toast
+i: #<Item:0x007f8de38c0640>
+** [#<Item:0x007f8de38c0758 @name="Milk", @price=0.35, @gluten_free="false", @vegie="false\n">, #<Item:0x007f8de38c0640 @name="Toast", @price=0.5, @gluten_free="false", @vegie="false\n">] **
+
+> order pizza
+i: #<Item:0x007f8de38c0aa0>
+** [#<Item:0x007f8de38c0758 @name="Milk", @price=0.35, @gluten_free="false", @vegie="false\n">, #<Item:0x007f8de38c0640 @name="Toast", @price=0.5, @gluten_free="false", @vegie="false\n">, #<Item:0x007f8de38c0aa0 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">] **
+
+> pay
+£5.84
+
+> clear
+£5.84
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> bill
+/Users/user/Documents/coding/cafe/Cafe.rb:97:in `[]': no implicit conversion from nil to integer (TypeError)
+	from /Users/user/Documents/coding/cafe/Cafe.rb:97:in `bill'
+	from /Users/user/Documents/coding/cafe/CafeConsole.rb:51:in `in'
+	from /Users/user/Documents/coding/cafe/ConsoleUI.rb:24:in `start'
+	from CodeClanCafe.rb:17:in `<main>'
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> bill
+** You must select a table first... **
+
+> add 
+** A new table has been added, it is Table 0 **
+
+> seat
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order pizza
+i: #<Item:0x007fd84bb0c3d8>
+** [#<Item:0x007fd84bb0c3d8 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">] **
+
+> order pizza
+i: #<Item:0x007fd84bb0c3d8>
+** [#<Item:0x007fd84bb0c3d8 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fd84bb0c3d8 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">] **
+
+> order cola
+i: #<Item:0x007fd84bb0c2c0>
+** [#<Item:0x007fd84bb0c3d8 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fd84bb0c3d8 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fd84bb0c2c0 @name="Cola", @price=1.99, @gluten_free="false", @vegie="false\n">] **
+
+> order cola
+i: #<Item:0x007fd84bb0c2c0>
+** [#<Item:0x007fd84bb0c3d8 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fd84bb0c3d8 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fd84bb0c2c0 @name="Cola", @price=1.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fd84bb0c2c0 @name="Cola", @price=1.99, @gluten_free="false", @vegie="false\n">] **
+
+> bill
+£13.96
+
+> clear
+£13.96
+
+> vst
+** Table 0 is currently selected **
+
+> vo
+** 
+* Pizza --- #<Item:0x007fd84bb0c3d8> 
+* Pizza --- #<Item:0x007fd84bb0c3d8> 
+* Cola --- #<Item:0x007fd84bb0c2c0> 
+* Cola --- #<Item:0x007fd84bb0c2c0> 
+ **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ ruby CodeClanCafe.rb
+
+Welcome to Cafe CodeClan...
+
+> add
+** A new table has been added, it is Table 0 **
+
+> seat
+** Table 0 has been seated with 1 customer(s) **
+
+> selt 0
+** 0 **
+
+> order pizza
+i: #<Item:0x007fc211584870>
+** [#<Item:0x007fc211584870 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">] **
+
+> order cola
+i: #<Item:0x007fc211584758>
+** [#<Item:0x007fc211584870 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc211584758 @name="Cola", @price=1.99, @gluten_free="false", @vegie="false\n">] **
+
+> order toast
+i: #<Item:0x007fc211584410>
+** [#<Item:0x007fc211584870 @name="Pizza", @price=4.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc211584758 @name="Cola", @price=1.99, @gluten_free="false", @vegie="false\n">, #<Item:0x007fc211584410 @name="Toast", @price=0.5, @gluten_free="false", @vegie="false\n">] **
+
+> vo
+** 
+* Pizza --- #<Item:0x007fc211584870> 
+* Cola --- #<Item:0x007fc211584758> 
+* Toast --- #<Item:0x007fc211584410> 
+ **
+
+> pay
+'pay' is not a recognised command...
+
+Cafe CodeClan
+---------------
+settables | sett [x]      : sets up [x] number of tables in the cafe
+addtable | add            : adds a new table and will return the table number
+seattable | seat [x] [y]  : seats [y] number of people at table [x]
+selecttable | selt [x]    : selects the table [x] so that it can be modified
+viewselectedtable | vst   : returns the table number that is currently selected
+unselecttable | ust       : unselects the current table, you will have to select a new table
+order [x]                 : adds item [x] to the selected table's order
+unorder [x]               : revoves item [x] from the selected table's order
+vieworder | vo            : returns the selected tables order
+items                     : returns a list of the items avaliable for order
+additem | addi [x] [p]    : adds a new item [x] and it's price [p] to the list of items avaliable for order
+removeitem | remi [x]     : removes item [x] from the list of items avaliable to order
+pay [x=1]                 : returns the total cost of the meal, if splitting between parties state [x] or will default to 1 paying party
+cleartable | clear        : clear the table and add the money from the bill to the Cafe cash
+cash                      : returns the total cash brought in through all the tables that have been cleared
+help                      : prints out this menu
+exit | close : will close the programme and the cafe
+
+> bill
+£7.48
+
+> vo
+** 
+* Pizza --- #<Item:0x007fc211584870> 
+* Cola --- #<Item:0x007fc211584758> 
+* Toast --- #<Item:0x007fc211584410> 
+ **
+
+> clear
+£7.48
+
+> vo
+** You must select a table first... **
+
+> vst
+** No table is currently selected **
+
+> selt 0
+** Please ensure you enter a table number **
+
+> exit
+Adios!
+➜  cafe git:(restructure) ✗ 

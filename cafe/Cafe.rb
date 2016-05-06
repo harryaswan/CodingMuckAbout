@@ -146,24 +146,32 @@ class Cafe
         # @menu.add_item(Item.new("Water", "0.00", true, true))
 
         # TODO: if file.exist? else create default items (water, milk)
+
+
         fname = "items/cafe_items.txt"
-        somefile = File.open(fname, "r")
 
-        somefile.readlines.each { |line|
-            tmp = line.chomp.split(",")
+        if File.exist?(fname)
 
-            for i in tmp
-                if i == "true"
-                    tmp[tmp.index(i)] = true
-                elsif i == "false"
-                    tmp[tmp.index(i)] = false
+            somefile = File.open(fname, "r")
+
+            somefile.readlines.each { |line|
+                tmp = line.chomp.split(",")
+
+                for i in tmp
+                    if i == "true"
+                        tmp[tmp.index(i)] = true
+                    elsif i == "false"
+                        tmp[tmp.index(i)] = false
+                    end
                 end
-            end
 
-            @menu.add_item(Item.new(tmp[0], tmp[1], tmp[2], tmp[3]))
-        }
-        somefile.close
-
+                @menu.add_item(Item.new(tmp[0], tmp[1], tmp[2], tmp[3]))
+            }
+            somefile.close
+        else
+                @menu.add_item(Item.new("Water", "0.00", true, true))
+                @menu.add_item(Item.new("Milk", "0.50", true, false))
+        end
 
 
     end
