@@ -1,0 +1,4 @@
+<h1>Game Board</h1>
+<% for a in (0...@vs_board.length) %>
+    <h2><%= @vs_board[a] %><%= "<button onClick=\"window.location.href='../play/#{@ids[a][:h_id]}/#{@ids[a][:a_id]}/#{@ids[a][:h_id]}'\">Home Won!</button><button onClick=\"window.location.href='../play/#{@ids[a][:h_id]}/#{@ids[a][:a_id]}/#{@ids[a][:a_id]}'\">Away Won!</button>" if !@played[a] %></h2>
+<% end %>
