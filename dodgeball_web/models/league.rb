@@ -3,8 +3,12 @@ class League
     attr_reader(:teams, :matches)
     def initialize(teams)
         @teams = teams
-        create_matches()
-        @matches = Match.all()
+    end
+
+    def get_team(id)
+        for t in @teams
+            return t if t.id == id
+        end
     end
 
     def no_of_teams()
@@ -26,10 +30,8 @@ class League
     end
 
     def play_game(home_team, away_team, winning_team)
-        puts "WE ARE HERE"
         @matches.each do |m|
             if m.home_team == home_team && m.away_team == away_team
-                puts "match: #{m.id}"
                 m.winner = winning_team
             end
         end
@@ -37,12 +39,13 @@ class League
 
     def table
         # league_table = [] #[team_name, wins, looses]
-
         league_table = @teams.map {|team| [team.name, team_total_wins(team.id), team_total_looses(team.id)]}
 
         return league_table.sort {|x,y| y[1] <=> x[1]}
+    end
 
-
+    def get_matches()
+        @matches = Match.all()
     end
 
     def create_matches()

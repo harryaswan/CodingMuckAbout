@@ -20,6 +20,11 @@ class Coach
         return Coach.create(sql, false)
     end
 
+    def self.all
+        sql = "SELECT * FROM coaches;"
+        return Coach.create(sql)
+    end
+
     def self.delete_all()
         sql = "DELETE FROM coaches;"
         SQLRun.exec(sql)

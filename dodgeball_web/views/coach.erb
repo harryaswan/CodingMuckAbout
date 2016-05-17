@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <td>Name</td>
+        <td><%= @coach.name %></td>
+    </tr>
+    <tr>
+        <td>Team</td>
+        <td>
+            <%= "<a href='/team/#{@team.id}'>#{@team.name}</a>" %>
+        </td>
+    </tr>
+</table>

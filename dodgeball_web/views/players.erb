@@ -1,0 +1,5 @@
+<ul>
+    <% for x in (0...@players.length) %>
+        <%= "<li><a href='/player/#{@players[x].id}'>#{@players[x].name}</a></li>" %>
+    <% end %>
+</ul>

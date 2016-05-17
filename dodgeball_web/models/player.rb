@@ -20,6 +20,11 @@ class Player
         return Player.create(sql, false)
     end
 
+    def self.all
+        sql = "SELECT * FROM players;"
+        return Player.create(sql)
+    end
+
     def self.delete_all()
         sql = "DELETE FROM players;"
         SQLRun.exec(sql)

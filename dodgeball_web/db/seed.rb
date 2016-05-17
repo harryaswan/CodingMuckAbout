@@ -16,24 +16,24 @@ teams << Team.new({'name'=>'Devil Dogs', 'location'=>'Texas'}).save()
 teams << Team.new({'name'=>'Hard Throwers', 'location'=>'Florida'}).save()
 
 players = []
-players << Player.new({'name'=>'Player1', 'team_id'=>teams[0].id}).save()
-players << Player.new({'name'=>'Player2', 'team_id'=>teams[0].id}).save()
-players << Player.new({'name'=>'Player3', 'team_id'=>teams[1].id}).save()
-players << Player.new({'name'=>'Player4', 'team_id'=>teams[1].id}).save()
-players << Player.new({'name'=>'Player5', 'team_id'=>teams[2].id}).save()
-players << Player.new({'name'=>'Player6', 'team_id'=>teams[2].id}).save()
+players << Player.new({'name'=>'Frank', 'position'=>'Thrower', 'team_id'=>teams[0].id}).save()
+players << Player.new({'name'=>'Betty', 'position'=>'Catcher', 'team_id'=>teams[0].id}).save()
+players << Player.new({'name'=>'Jeremy', 'position'=>'Thrower', 'team_id'=>teams[1].id}).save()
+players << Player.new({'name'=>'Heather', 'position'=>'Catcher', 'team_id'=>teams[1].id}).save()
+players << Player.new({'name'=>'Paul', 'position'=>'Thrower', 'team_id'=>teams[2].id}).save()
+players << Player.new({'name'=>'Rosemary', 'position'=>'Chatcher', 'team_id'=>teams[2].id}).save()
 
 coaches = []
 coaches << Coach.new({'name'=>'Dave', 'team_id'=>teams[0].id}).save()
 coaches << Coach.new({'name'=>'Colin', 'team_id'=>teams[1].id}).save()
 coaches << Coach.new({'name'=>'James', 'team_id'=>teams[2].id}).save()
-
-matches = []
-teams.each do |team1|
-    for team2index in (teams.index(team1)+1...teams.length)
-        team2 = teams[team2index]
-        matches << Match.new({'home_team'=>team1.id, 'away_team'=>team2.id, 'winning_team'=>0}).save()
-        matches << Match.new({'home_team'=>team2.id, 'away_team'=>team1.id, 'winning_team'=>0}).save()
-    end
-end
-matches = matches
+#
+# matches = []
+# teams.each do |team1|
+#     for team2index in (teams.index(team1)+1...teams.length)
+#         team2 = teams[team2index]
+#         matches << Match.new({'home_team'=>team1.id, 'away_team'=>team2.id, 'winning_team'=>0}).save()
+#         matches << Match.new({'home_team'=>team2.id, 'away_team'=>team1.id, 'winning_team'=>0}).save()
+#     end
+# end
+# matches = matches

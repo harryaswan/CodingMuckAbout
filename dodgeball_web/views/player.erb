@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <td>Name</td>
+        <td><%= @player.name %></td>
+    </tr>
+    <tr>
+        <td>Position</td>
+        <td><%= @player.position %></td>
+    </tr>
+    <tr>
+        <td>Team</td>
+        <td>
+            <%= "<a href='/team/#{@team.id}'>#{@team.name}</a>" %>
+        </td>
+    </tr>
+</table>
