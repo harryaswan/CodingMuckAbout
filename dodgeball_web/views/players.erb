@@ -3,3 +3,18 @@
         <%= "<li><a href='/player/#{@players[x].id}'>#{@players[x].name}</a></li>" %>
     <% end %>
 </ul>
+
+<h4>Create New Player</h4>
+<form action='' method="post">
+    Name:<input type="text" name="name" placeholder="Name" />
+    Location:<input type="text" name="position" placeholder="Position" />
+    Team:
+    <select name='team_id'>
+        <option value="nil">Pick a team</option>
+        <% for t in Team.all() %>
+            <%= "<option value='#{t.id}'>#{t.name}</option>" %>
+        <% end %>
+    </select>
+    <input type="submit" value="Save" name="create_player" />
+</form>
+<%= "<b class='errors'>#{@error}</b>" if @error %>

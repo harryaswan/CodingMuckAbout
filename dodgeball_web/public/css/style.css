@@ -4,3 +4,14 @@ body {
 nav ul li {
     display: inline;
 }
+.game_board, .standings_table {
+
+    text-align: center;
+
+}
+.played {
+    color: gray;
+}
+.not_played {
+    color: blue;
+}

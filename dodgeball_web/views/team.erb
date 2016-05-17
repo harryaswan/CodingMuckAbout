@@ -19,8 +19,12 @@
         <td>Players</td>
         <td>
             <% players = @team.players %>
-            <% for a in (0...players.length) %>
-                <%= "<li><a href='/player/#{players[a].id}'>#{players[a].name}</a></li>" %>
+            <% if players.length > 0 %>
+                <% for a in (0...players.length) %>
+                    <%= "<a href='/player/#{players[a].id}'>#{players[a].name}</a>" %>
+                <% end %>
+            <% else %>
+                <p>No players yet</p>
             <% end %>
         </td>
     </tr>
@@ -28,7 +32,11 @@
         <td>Coach</td>
         <td>
             <% coach = @team.coach %>
-            <%= "<li><a href='/coach/#{coach.id}'>#{coach.name}</a></li>" %>
+            <% if coach %>
+                <%= "<a href='/coach/#{coach.id}'>#{coach.name}</a>" %>
+            <% else %>
+                <p>No coach yet</p>
+            <% end %>
         </td>
     </tr>
 </table>

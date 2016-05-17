@@ -3,3 +3,11 @@
         <%= "<li><a href='/team/#{@teams[x].id}'>#{@teams[x].name}</a></li>" %>
     <% end %>
 </ul>
+
+<h4>Create New Team</h4>
+<form action='' method="post">
+    Name:<input type="text" name="name" placeholder="Team Name" />
+    Location:<input type="text" name="location" placeholder="Location" />
+    <input type="submit" value="Save" name="create_team" />
+</form>
+<%= "<b class='errors'>#{@error}</b>" if @error %>

@@ -6,24 +6,27 @@
     <% end %>
 </form>
 <% if @table %>
-    <h1>Current League Standings</h1>
-    <table>
-        <tr>
-            <td>Pos:</td>
-            <td>Name:</td>
-            <td>Wins:</td>
-            <td>Loses:</td>
-        </tr>
-        <% for x in (0...@table.length) %>
-            <%= "<tr><td>#{x}</td><td>#{@table[x][0]}</td><td>#{@table[x][1]}</td><td>#{@table[x][2]}</td></tr>" %>
+    <div class="standings_table">
+        <h1>Current League Standings</h1>
+        <table>
+            <tr>
+                <td>Pos:</td>
+                <td>Name:</td>
+                <td>Wins:</td>
+                <td>Loses:</td>
+            </tr>
+            <% for x in (0...@table.length) %>
+                <%= "<tr><td>\##{x+1}</td><td>#{@table[x][0]}</td><td>#{@table[x][1]}</td><td>#{@table[x][2]}</td></tr>" %>
+            <% end %>
+        </table>
+    </div>
+    <div class='game_board'>
+        <h1>Game Board</h1>
+        <% for a in (0...@vs_board.length) %>
+            <%= @played[a] ? "<h2 class='played'>#{@vs_board[a]}</h2>" : "<h2 class='not_played'>#{@vs_board[a]}</h2>" %><%= "<form action='/play' method='post'><input type='hidden' name='h_a' value='#{@ids[a][:h_id]},#{@ids[a][:a_id]}' /><input type='submit' name='home' value='Home Won!' /><input type='submit' name='away' value='Away Won!' /></form>" if !@played[a] %>
+                <!-- <%= "<button onClick=\"window.location.href='../play/#{@ids[a][:h_id]}/#{@ids[a][:a_id]}/#{@ids[a][:h_id]}'\">Home Won!</button><button onClick=\"window.location.href='../play/#{@ids[a][:h_id]}/#{@ids[a][:a_id]}/#{@ids[a][:a_id]}'\">Away Won!</button>" if !@played[a] %></h2> -->
         <% end %>
-    </table>
-
-    <h1>Game Board</h1>
-    <% for a in (0...@vs_board.length) %>
-        <h2><%= @vs_board[a] %><%= "<form action='/play' method='post'><input type='hidden' name='h_a' value='#{@ids[a][:h_id]},#{@ids[a][:a_id]}' /><input type='submit' name='home' value='Home Won!' /><input type='submit' name='away' value='Away Won!' /></form>" if !@played[a] %></h2>
-            <!-- <%= "<button onClick=\"window.location.href='../play/#{@ids[a][:h_id]}/#{@ids[a][:a_id]}/#{@ids[a][:h_id]}'\">Home Won!</button><button onClick=\"window.location.href='../play/#{@ids[a][:h_id]}/#{@ids[a][:a_id]}/#{@ids[a][:a_id]}'\">Away Won!</button>" if !@played[a] %></h2> -->
-    <% end %>
+    </div>
 
 <% else %>
     <h2>There are currenlty no matches.</h2>

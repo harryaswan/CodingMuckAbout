@@ -9,6 +9,7 @@ class League
         for t in @teams
             return t if t.id == id
         end
+        return nil
     end
 
     def no_of_teams()
